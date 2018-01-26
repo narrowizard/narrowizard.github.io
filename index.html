@@ -32,7 +32,7 @@
 
 
 
-
+<meta property="og:updated_time" content="2018-01-26T15:58:38&#43;08:00"/>
 
 
 
@@ -67,6 +67,12 @@
     <div class="flex-l items-center">
       
         <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/hugo/" title="Hugos page">
+              Hugos
+            </a>
+          </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white no-underline white-90" href="/web/" title="web page">
@@ -119,6 +125,60 @@
   
   
   
+  
+    
+    
+
+    <div class="pa3 pa4-ns w-100 w-70-ns center">
+      
+       
+          <h1 class="flex-none">
+            Recent Hugos
+          </h1>
+        
+
+      
+
+      <section class="w-100 mw8">
+        
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/hugo/build/" class="color-inherit dim link">
+            使用hugo搭建静态markdown博客
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+           前言(这一段唠嗑,请自行跳过) 其实想要搞一个博客已经有一段时间了。由于种种原因（其实就是懒），一直没有真的动手。说起原因，我觉得比较重要的就是：现在市面上的博客已经有很多了，我也想不到什么特色功能，也就没有什么动力自己动手写一个博客。
+之前有尝试过一些开源的项目，但是均以失败告终了（不是项目不好，是有其他原因的）。下面说说尝试过的一些开源项目:
+ wordpress。wordpress是一个基于php的CMS，使用mysql作为数据库，功能十分完备，各种模板，支持后台管理，自定义模块什么的。不过我失败的原因，竟然是，我那1核1G的服务器根本跑不了wordpress啊，无奈只能放弃。 blog。这个博客系统呢，是小伙伴开发的，目的是为了测试tinygo框架。项目支持分类、文件管理、评论等博客常用的功能，这个博客系统我也用过一段时间，发现他的markdown编辑器有点难用，在加上UI不出众，所以决定找个新的。值得一提的是，得益于golang的性能，tinygo框架以及这个博客系统对系统资源的要求非常低，很好的解决了我在用wordpress时的尴尬。 jekyll。这个项目是在搞github page的时候发现的，那时候学到了一个新的概念，静态博客生成器。结合自己的需求，突然很喜欢这样的静态博客，总的来说就是简洁、够用。而且jekyll还有一个天生优势，那就是得到了github page的支持，这个优势非常明显，我们可以省下一大笔购买服务器的钱。但是我在用这个的时候呢，又碰壁了，得益于国内的网络环境，我尝试了好几次都不能安装成功（也许是我需要一个linux系统，我记得之前安装失败是报了个msys2的错）。能够成功安装jekyll的同学，我还是很看好这个项目的。
+  然后就来到了hugo，这个项目简直完美满足我的所有需求啊，而且有很多很漂亮的主题。不过在使用过程中，还是踩了很多坑，下面就说说这整个过程。
+安装 得益于golang的特性，编译后，我们就可以得到一个hugo的可执行文件。如果只是想用hugo来写博客，而不是研究他的源码什么的，我建议直接到这里选择适合你操作系统的版本下载，因为只有一个可执行文件，太方便了。不推荐大家使用源码安装还是因为hugo有用到一些托管在golang.org上的package，很难下下来。
+拿到hugo的可执行文件之后呢，就跟着官方的quickstart一路下来，基本没有什么大的问题（一开始尝试了一下换主题，不过由于没有很理解hugo的渲染逻辑，果断失败了，下次搞好了再写一篇关于主题的文章）。
+如何使用hugo 一开始用 hugo new site your_site_path 创建一个hugo项目之后，我就懵了，可能是我没有乖乖按照quickstart的流程走，所以产生了这么多问题。
+ 我是谁？ 我在哪？ 我要干什么？ 我怎么设置分类？ 我怎么写文章？ 我怎么在首页显示列表？  经过一段时间的摸索之后，我发现hugo帮我们做了很多事情，
+部署方案 参考资料  hugo_server  
+        </div>
+          <a href="/hugo/build/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+      </section>
+
+      
+
+      </div>
   
 
     </main>
