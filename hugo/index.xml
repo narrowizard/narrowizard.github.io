@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugos on NaRro</title>
-    <link>https://narro.me/hugo/</link>
+    <link>https://narrowizard.github.io/hugo/</link>
     <description>Recent content in Hugos on NaRro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Fri, 26 Jan 2018 15:58:38 +0800</lastBuildDate>
     
-	<atom:link href="https://narro.me/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://narrowizard.github.io/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用hugo搭建静态markdown博客</title>
-      <link>https://narro.me/hugo/build/</link>
+      <link>https://narrowizard.github.io/hugo/build/</link>
       <pubDate>Fri, 26 Jan 2018 15:58:38 +0800</pubDate>
       
-      <guid>https://narro.me/hugo/build/</guid>
+      <guid>https://narrowizard.github.io/hugo/build/</guid>
       <description>前言(这一段唠嗑,请自行跳过) 其实想要搞一个博客已经有一段时间了。由于种种原因（其实就是懒），一直没有真的动手。说起原因，我觉得比较重要的就是：现在市面上的博客已经有很多了，我也想不到什么特色功能，也就没有什么动力自己动手写一个博客。
 之前有尝试过一些开源的项目，但是均以失败告终了（不是项目不好，是有其他原因的）。下面说说尝试过的一些开源项目:
  wordpress。wordpress是一个基于php的CMS，使用mysql作为数据库，功能十分完备，各种模板，支持后台管理，自定义模块什么的。不过我失败的原因，竟然是，我那1核1G的服务器根本跑不了wordpress啊，无奈只能放弃。 blog。这个博客系统呢，是小伙伴开发的，目的是为了测试tinygo框架。项目支持分类、文件管理、评论等博客常用的功能，这个博客系统我也用过一段时间，发现他的markdown编辑器有点难用，在加上UI不出众，所以决定找个新的。值得一提的是，得益于golang的性能，tinygo框架以及这个博客系统对系统资源的要求非常低，很好的解决了我在用wordpress时的尴尬。 jekyll。这个项目是在搞github page的时候发现的，那时候学到了一个新的概念，静态博客生成器。结合自己的需求，突然很喜欢这样的静态博客，总的来说就是简洁、够用。而且jekyll还有一个天生优势，那就是得到了github page的支持，这个优势非常明显，我们可以省下一大笔购买服务器的钱。但是我在用这个的时候呢，又碰壁了，得益于国内的网络环境，我尝试了好几次都不能安装成功（也许是我需要一个linux系统，我记得之前安装失败是报了个msys2的错）。能够成功安装jekyll的同学，我还是很看好这个项目的。

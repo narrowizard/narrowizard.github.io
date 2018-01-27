@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photos on NaRro</title>
-    <link>https://narro.me/photo/</link>
+    <link>https://narrowizard.github.io/photo/</link>
     <description>Recent content in Photos on NaRro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Sat, 27 Jan 2018 11:22:30 +0800</lastBuildDate>
     
-	<atom:link href="https://narro.me/photo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://narrowizard.github.io/photo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>EXIF属性信息</title>
-      <link>https://narro.me/photo/exif/</link>
+      <link>https://narrowizard.github.io/photo/exif/</link>
       <pubDate>Sat, 27 Jan 2018 11:22:30 +0800</pubDate>
       
-      <guid>https://narro.me/photo/exif/</guid>
+      <guid>https://narrowizard.github.io/photo/exif/</guid>
       <description> Orientation(方向) MeteringMode(测光模式)  0 未知 1 平均 2 偏中心平均 3 点 4 多点 5 图案(多重) 6 部分 255 其他  Flash(闪光灯模式) ExposureProgram(曝光程序)  0 未知 1 手动 2 正常 3 光圈优先 4 快门优先 5 创作程序(偏重使用视野深度) 6 操作程序(偏重使用快门速度) 7 纵向模式 8 横向模式  WhiteBalance(白平衡)  0 自动 1 手动  LightSource(光源)  0 未知 1 日光 2 荧光 3 钨丝灯 4 闪光灯 9 晴天 10 多云 11 阴天 12 日光灯 13  </description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gitlabs on NaRro</title>
-    <link>https://narro.me/gitlab/</link>
+    <link>https://narrowizard.github.io/gitlab/</link>
     <description>Recent content in Gitlabs on NaRro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Sat, 27 Jan 2018 10:42:19 +0800</lastBuildDate>
     
-	<atom:link href="https://narro.me/gitlab/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://narrowizard.github.io/gitlab/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>gitlab迁移日志</title>
-      <link>https://narro.me/gitlab/migration/</link>
+      <link>https://narrowizard.github.io/gitlab/migration/</link>
       <pubDate>Sat, 27 Jan 2018 10:42:19 +0800</pubDate>
       
-      <guid>https://narro.me/gitlab/migration/</guid>
+      <guid>https://narrowizard.github.io/gitlab/migration/</guid>
       <description> 由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。
 旧服务器信息 当时部署gitlab是直接使用官方的docker镜像的，版本为8.14.0-ce.0
 使用外置的postgresql，也是用docker跑的一个container，版本为9.6.1
