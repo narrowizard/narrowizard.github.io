@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://narro.me/centos/fatal-protocol-error-bad-line-length-character/</loc>
+    <lastmod>2018-01-27T11:29:58+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://narro.me/centos/config/</loc>
+    <lastmod>2018-01-27T11:27:27+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://narro.me/photo/exif/</loc>
+    <lastmod>2018-01-27T11:22:30+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://narro.me/docker/centos/</loc>
+    <lastmod>2018-01-27T10:50:35+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://narro.me/gitlab/migration/</loc>
+    <lastmod>2018-01-27T10:42:19+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://narro.me/hugo/build/</loc>
     <lastmod>2018-01-26T15:58:38+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -16,8 +51,36 @@
   </url>
   
   <url>
+    <loc>https://narro.me/centos/</loc>
+    <lastmod>2018-01-27T11:29:58+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narro.me/docker/</loc>
+    <lastmod>2018-01-27T10:50:35+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narro.me/gitlab/</loc>
+    <lastmod>2018-01-27T10:42:19+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://narro.me/hugo/</loc>
     <lastmod>2018-01-26T15:58:38+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narro.me/photo/</loc>
+    <lastmod>2018-01-27T11:22:30+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -29,14 +92,8 @@
   </url>
   
   <url>
-    <loc>https://narro.me/web/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://narro.me/</loc>
-    <lastmod>2018-01-26T15:58:38+08:00</lastmod>
+    <lastmod>2018-01-27T11:29:58+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

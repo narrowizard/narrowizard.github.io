@@ -21,14 +21,18 @@
     
 
     
-      <link href="https://narro.me/categories/index.xml" rel="alternate" type="application/rss+xml" title="NaRro" />
-      <link href="https://narro.me/categories/index.xml" rel="feed" type="application/rss+xml" title="NaRro" />
+      <link href="https://narro.me/docker/index.xml" rel="alternate" type="application/rss+xml" title="NaRro" />
+      <link href="https://narro.me/docker/index.xml" rel="feed" type="application/rss+xml" title="NaRro" />
     
 
-    <meta property="og:title" content="Categories" />
+    <meta property="og:title" content="Dockers" />
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://narro.me/categories/" />
+<meta property="og:url" content="https://narro.me/docker/" />
+
+
+
+<meta property="og:updated_time" content="2018-01-27T10:50:35&#43;08:00"/>
 
 
 
@@ -39,14 +43,10 @@
 
 
 
-
-
-
-
-<meta itemprop="name" content="Categories">
+<meta itemprop="name" content="Dockers">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Categories"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Dockers"/>
 <meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
 
   </head>
@@ -122,7 +122,7 @@
 
       <div class="tc-l pv4 pv6-l ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          Categories
+          Dockers
         </h1>
         
       </div>
@@ -132,16 +132,38 @@
 
     <main class="pb7" role="main">
       
-    
   <article class="cf pa3 pa4-m pa4-l">
     <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
       
     </div>
   </article>
   <div class="mw8 center">
-    <section class="ph4">
+    
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Docker</span>
+    <h1 class="f3 near-black">
+      <a href="/docker/centos/" class="link black dim">
+        Install docker on CentOS7
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       Install docker on CentOS7 Required  os: x64 kernel: 3.10+
+$ uname -r
+  Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &lt;&lt;-'EOF' [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
+{ &quot;registry-mirrors&quot;: [&quot;&lt;your accelerate address&gt;&quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &lt;containerId&gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk '{print $1}' | xargs docker rm # remove images that without name or tag docker images | grep none | awk '{print $3}' | xargs docker rmi  
+    </div>
+  </div>
+</div>
+
+        </div>
       
     </section>
+  
+
   </div>
 
     </main>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dockers on NaRro</title>
+    <link>https://narro.me/docker/</link>
+    <description>Recent content in Dockers on NaRro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Sat, 27 Jan 2018 10:50:35 +0800</lastBuildDate>
+    
+	<atom:link href="https://narro.me/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install docker on CentOS7</title>
+      <link>https://narro.me/docker/centos/</link>
+      <pubDate>Sat, 27 Jan 2018 10:50:35 +0800</pubDate>
+      
+      <guid>https://narro.me/docker/centos/</guid>
+      <description> Install docker on CentOS7 Required  os: x64 kernel: 3.10+
+$ uname -r
+  Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &amp;lt;&amp;lt;-&#39;EOF&#39; [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
+{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;&amp;lt;your accelerate address&amp;gt;&amp;quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &amp;lt;containerId&amp;gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &amp;lt;containerId&amp;gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk &#39;{print $1}&#39; | xargs docker rm # remove images that without name or tag docker images | grep none | awk &#39;{print $3}&#39; | xargs docker rmi  </description>
+    </item>
+    
+  </channel>
+</rss>

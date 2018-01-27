@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Centos on NaRro</title>
+    <link>https://narro.me/centos/</link>
+    <description>Recent content in Centos on NaRro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Sat, 27 Jan 2018 11:29:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://narro.me/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>fatal: protocol error: bad line length character</title>
+      <link>https://narro.me/centos/fatal-protocol-error-bad-line-length-character/</link>
+      <pubDate>Sat, 27 Jan 2018 11:29:58 +0800</pubDate>
+      
+      <guid>https://narro.me/centos/fatal-protocol-error-bad-line-length-character/</guid>
+      <description>git的ssh客户端在收到错误信息后，会主动断开连接，并返回错误信息，但是信息内容不完整。
+这个时候通过以下方法获取错误信息。
+ssh &amp;lt;user&amp;gt;@&amp;lt;host&amp;gt; git-receive-pack &amp;lt;path-to-git-repository&amp;gt;  refer to:stackoverflow q8170436</description>
+    </item>
+    
+    <item>
+      <title>centos 常用配置</title>
+      <link>https://narro.me/centos/config/</link>
+      <pubDate>Sat, 27 Jan 2018 11:27:27 +0800</pubDate>
+      
+      <guid>https://narro.me/centos/config/</guid>
+      <description> 设置时间同步 #安装ntp yum install ntp #跟time.nist.gov同步时间 ntpdate time.nist.gov  设置静态ip  配置文件地址: /etc/sysconfig/network-scripts/ifcfg-eth0 参考配置  TYPE=Ethernet BOOTPROTO=static DEFROUTE=yes PEERDNS=yes PEERROUTES=yes IPV4_FAILURE_FATAL=no IPV6INIT=yes IPV6_AUTOCONF=yes IPV6_DEFROUTE=yes IPV6_PEERDNS=yes IPV6_PEERROUTES=yes IPV6_FAILURE_FATAL=no NAME=eth0 UUID=aebdeada-4d90-4b7d-b7e9-e964bdd74caa DEVICE=eth0 ONBOOT=yes IPADDR=192.168.2.220 NETMASK=255.255.255.0 GATEWAY=192.168.2.1 DNS1=192.168.2.1   重启网络 systemctl restart network  </description>
+    </item>
+    
+  </channel>
+</rss>

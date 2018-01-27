@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitlabs on NaRro</title>
+    <link>https://narro.me/gitlab/</link>
+    <description>Recent content in Gitlabs on NaRro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Sat, 27 Jan 2018 10:42:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://narro.me/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gitlab迁移日志</title>
+      <link>https://narro.me/gitlab/migration/</link>
+      <pubDate>Sat, 27 Jan 2018 10:42:19 +0800</pubDate>
+      
+      <guid>https://narro.me/gitlab/migration/</guid>
+      <description> 由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。
+旧服务器信息 当时部署gitlab是直接使用官方的docker镜像的，版本为8.14.0-ce.0
+使用外置的postgresql，也是用docker跑的一个container，版本为9.6.1
+ postgres的data目录在/srv/data/db gitlab的data目录在/srv/data/gitlab/data gitlab的config目录在/srv/data/gitlab/config gitlab的log目录在/srv/data/gitlab/log  迁移步骤 原本可以直接使用gitlab的迁移工具备份并且迁移的，但是由于使用了外置的postgresql，导致数据库版本不匹配，所以只能手动迁移了。
+ 首先迁移数据库，直接将旧的数据库目录复制到新的服务器上，重新用docker跑一个新的postgresql container，并把数据目录挂载起来就ok了。 使用gitlab提供的迁移工具进行迁移，但是跳过数据库。  # 备份 gitlab-rake gitlab:backup:create SKIP=db # 恢复 # 停止相关数据连接服务 gitlab-ctl stop unicorn gitlab-ctl stop sidekiq # 从1393513186编号备份中恢复 gitlab-rake gitlab:backup:restore BACKUP=1393513186 # 启动Gitlab sudo gitlab-ctl start  </description>
+    </item>
+    
+  </channel>
+</rss>

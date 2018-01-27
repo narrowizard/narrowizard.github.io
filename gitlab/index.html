@@ -21,14 +21,18 @@
     
 
     
-      <link href="https://narro.me/categories/index.xml" rel="alternate" type="application/rss+xml" title="NaRro" />
-      <link href="https://narro.me/categories/index.xml" rel="feed" type="application/rss+xml" title="NaRro" />
+      <link href="https://narro.me/gitlab/index.xml" rel="alternate" type="application/rss+xml" title="NaRro" />
+      <link href="https://narro.me/gitlab/index.xml" rel="feed" type="application/rss+xml" title="NaRro" />
     
 
-    <meta property="og:title" content="Categories" />
+    <meta property="og:title" content="Gitlabs" />
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://narro.me/categories/" />
+<meta property="og:url" content="https://narro.me/gitlab/" />
+
+
+
+<meta property="og:updated_time" content="2018-01-27T10:42:19&#43;08:00"/>
 
 
 
@@ -39,14 +43,10 @@
 
 
 
-
-
-
-
-<meta itemprop="name" content="Categories">
+<meta itemprop="name" content="Gitlabs">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Categories"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Gitlabs"/>
 <meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
 
   </head>
@@ -122,7 +122,7 @@
 
       <div class="tc-l pv4 pv6-l ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          Categories
+          Gitlabs
         </h1>
         
       </div>
@@ -132,16 +132,39 @@
 
     <main class="pb7" role="main">
       
-    
   <article class="cf pa3 pa4-m pa4-l">
     <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
       
     </div>
   </article>
   <div class="mw8 center">
-    <section class="ph4">
+    
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Gitlab</span>
+    <h1 class="f3 near-black">
+      <a href="/gitlab/migration/" class="link black dim">
+        gitlab迁移日志
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。
+旧服务器信息 当时部署gitlab是直接使用官方的docker镜像的，版本为8.14.0-ce.0
+使用外置的postgresql，也是用docker跑的一个container，版本为9.6.1
+ postgres的data目录在/srv/data/db gitlab的data目录在/srv/data/gitlab/data gitlab的config目录在/srv/data/gitlab/config gitlab的log目录在/srv/data/gitlab/log  迁移步骤 原本可以直接使用gitlab的迁移工具备份并且迁移的，但是由于使用了外置的postgresql，导致数据库版本不匹配，所以只能手动迁移了。
+ 首先迁移数据库，直接将旧的数据库目录复制到新的服务器上，重新用docker跑一个新的postgresql container，并把数据目录挂载起来就ok了。 使用gitlab提供的迁移工具进行迁移，但是跳过数据库。  # 备份 gitlab-rake gitlab:backup:create SKIP=db # 恢复 # 停止相关数据连接服务 gitlab-ctl stop unicorn gitlab-ctl stop sidekiq # 从1393513186编号备份中恢复 gitlab-rake gitlab:backup:restore BACKUP=1393513186 # 启动Gitlab sudo gitlab-ctl start  
+    </div>
+  </div>
+</div>
+
+        </div>
       
     </section>
+  
+
   </div>
 
     </main>
