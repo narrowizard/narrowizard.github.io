@@ -23,7 +23,7 @@
     
 
     <meta property="og:title" content="Install docker on CentOS7" />
-<meta property="og:description" content=" Install docker on CentOS7 Required  os: x64 kernel: 3.10&#43;
+<meta property="og:description" content=" Install docker on CentOS7 Update  经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照新版安装说明。 小版本更新只需要执行 yum install docker-engine 就可以了。如：从17.03更新到17.05。  Required  os: x64 kernel: 3.10&#43;
 $ uname -r
   Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &lt;&lt;-&#39;EOF&#39; [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
 { &quot;registry-mirrors&quot;: [&quot;&lt;your accelerate address&gt;&quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &lt;containerId&gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk &#39;{print $1}&#39; | xargs docker rm # remove images that without name or tag docker images | grep none | awk &#39;{print $3}&#39; | xargs docker rmi  " />
@@ -47,7 +47,7 @@ $ uname -r
 
 
 <meta itemprop="name" content="Install docker on CentOS7">
-<meta itemprop="description" content=" Install docker on CentOS7 Required  os: x64 kernel: 3.10&#43;
+<meta itemprop="description" content=" Install docker on CentOS7 Update  经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照新版安装说明。 小版本更新只需要执行 yum install docker-engine 就可以了。如：从17.03更新到17.05。  Required  os: x64 kernel: 3.10&#43;
 $ uname -r
   Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &lt;&lt;-&#39;EOF&#39; [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
 { &quot;registry-mirrors&quot;: [&quot;&lt;your accelerate address&gt;&quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &lt;containerId&gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk &#39;{print $1}&#39; | xargs docker rm # remove images that without name or tag docker images | grep none | awk &#39;{print $3}&#39; | xargs docker rmi  ">
@@ -55,13 +55,13 @@ $ uname -r
 
 <meta itemprop="datePublished" content="2018-01-27T10:50:35&#43;08:00" />
 <meta itemprop="dateModified" content="2018-01-27T10:50:35&#43;08:00" />
-<meta itemprop="wordCount" content="113">
+<meta itemprop="wordCount" content="123">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Install docker on CentOS7"/>
-<meta name="twitter:description" content=" Install docker on CentOS7 Required  os: x64 kernel: 3.10&#43;
+<meta name="twitter:description" content=" Install docker on CentOS7 Update  经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照新版安装说明。 小版本更新只需要执行 yum install docker-engine 就可以了。如：从17.03更新到17.05。  Required  os: x64 kernel: 3.10&#43;
 $ uname -r
   Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &lt;&lt;-&#39;EOF&#39; [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
 { &quot;registry-mirrors&quot;: [&quot;&lt;your accelerate address&gt;&quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &lt;containerId&gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk &#39;{print $1}&#39; | xargs docker rm # remove images that without name or tag docker images | grep none | awk &#39;{print $3}&#39; | xargs docker rmi  "/>
@@ -156,6 +156,13 @@ $ uname -r
 
 <h1 id="install-docker-on-centos7-https-docs-docker-com-engine-installation-linux-centos"><a href="https://docs.docker.com/engine/installation/linux/centos/">Install docker on CentOS7</a></h1>
 
+<h2 id="update">Update</h2>
+
+<ul>
+<li>经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照<a href="/docker/centos2/">新版安装说明</a>。</li>
+<li>小版本更新只需要执行 <code>yum install docker-engine</code> 就可以了。如：从17.03更新到17.05。</li>
+</ul>
+
 <h2 id="required">Required</h2>
 
 <ol>
@@ -219,6 +226,29 @@ docker images | grep none | awk '{print $3}' | xargs docker rmi
 
 
 
+
+  <div class="bg-light-gray pa3">
+    <ul>
+      <li class="list b mb3">
+        1 More Docker
+      </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/docker/centos2/" class="link ph2 pv2 db black">
+            在centos安装最新版Docker CE版本
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/docker/centos/" class="link ph2 pv2 db black o-50">
+            Install docker on CentOS7
+          </a>
+        </li>
+      
+    </ul>
+  </div>
 
 
     </aside>

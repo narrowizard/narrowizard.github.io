@@ -32,7 +32,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-01-27T10:50:35&#43;08:00"/>
+<meta property="og:updated_time" content="2018-01-29T17:07:38&#43;08:00"/>
 
 
 
@@ -146,12 +146,30 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Docker</span>
     <h1 class="f3 near-black">
+      <a href="/docker/centos2/" class="link black dim">
+        在centos安装最新版Docker CE版本
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       说明 上一篇docker的文章是以前在centos安装docker的方法， 现在使用这种方法只能安装docker ce 17.05版本。最新的安装方法参见官方文档，目前版本为17.12.0
+Step $ sudo yum install -y yum-utils \ device-mapper-persistent-data \ lvm2 $ sudo yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo $ sudo yum install docker-ce $ sudo systemctl start docker  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Docker</span>
+    <h1 class="f3 near-black">
       <a href="/docker/centos/" class="link black dim">
         Install docker on CentOS7
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-       Install docker on CentOS7 Required  os: x64 kernel: 3.10+
+       Install docker on CentOS7 Update  经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照新版安装说明。 小版本更新只需要执行 yum install docker-engine 就可以了。如：从17.03更新到17.05。  Required  os: x64 kernel: 3.10+
 $ uname -r
   Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &lt;&lt;-'EOF' [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
 { &quot;registry-mirrors&quot;: [&quot;&lt;your accelerate address&gt;&quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &lt;containerId&gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk '{print $1}' | xargs docker rm # remove images that without name or tag docker images | grep none | awk '{print $3}' | xargs docker rmi  
