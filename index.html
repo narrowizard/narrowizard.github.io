@@ -199,7 +199,8 @@ ssh &lt;user&gt;@&lt;host&gt; git-receive-pack &lt;path-to-git-repository&gt;  r
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-           设置时间同步 #安装ntp yum install ntp #跟time.nist.gov同步时间 ntpdate time.nist.gov  设置静态ip  配置文件地址: /etc/sysconfig/network-scripts/ifcfg-eth0 参考配置  TYPE=Ethernet BOOTPROTO=static DEFROUTE=yes PEERDNS=yes PEERROUTES=yes IPV4_FAILURE_FATAL=no IPV6INIT=yes IPV6_AUTOCONF=yes IPV6_DEFROUTE=yes IPV6_PEERDNS=yes IPV6_PEERROUTES=yes IPV6_FAILURE_FATAL=no NAME=eth0 UUID=aebdeada-4d90-4b7d-b7e9-e964bdd74caa DEVICE=eth0 ONBOOT=yes IPADDR=192.168.2.220 NETMASK=255.255.255.0 GATEWAY=192.168.2.1 DNS1=192.168.2.1   重启网络 systemctl restart network  
+           设置时间同步 #安装ntp yum install ntp #跟time.nist.gov同步时间 ntpdate time.nist.gov  ntpdate出现错误无法使用时, 有一种神奇的方法来设置时间(如有需要请自行为wget加上代理,http_proxy=xxx wget),参考资料
+sudo date -s &quot;$(wget -qSO- --max-redirect=0 google.com 2&gt;&amp;1 | grep Date: | cut -d' ' -f5-8)Z&quot;  设置静态ip  配置文件地址: /etc/sysconfig/network-scripts/ifcfg-eth0 参考配置  TYPE=Ethernet BOOTPROTO=static DEFROUTE=yes PEERDNS=yes PEERROUTES=yes IPV4_FAILURE_FATAL=no IPV6INIT=yes IPV6_AUTOCONF=yes IPV6_DEFROUTE=yes IPV6_PEERDNS=yes IPV6_PEERROUTES=yes IPV6_FAILURE_FATAL=no NAME=eth0 UUID=aebdeada-4d90-4b7d-b7e9-e964bdd74caa DEVICE=eth0 ONBOOT=yes IPADDR=192.168.2.220 NETMASK=255.255.255.0 GATEWAY=192.168.2.1 DNS1=192.168.2.1   重启网络 systemctl restart network  
         </div>
           <a href="/centos/config/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
