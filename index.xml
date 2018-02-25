@@ -6,10 +6,21 @@
     <description>Recent content in 伟大的渺小 on NaRro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Mon, 29 Jan 2018 17:07:38 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 25 Feb 2018 13:07:21 +0800</lastBuildDate>
     
 	<atom:link href="https://narrowizard.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用goaccess生成可视化的访问日志</title>
+      <link>https://narrowizard.github.io/centos/goaccess/</link>
+      <pubDate>Sun, 25 Feb 2018 13:07:21 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/centos/goaccess/</guid>
+      <description>简介 GoAccess是一个开源的实时web访问日志分析工具，实现了基于终端或浏览器的数据可视化，并且提供了有用的统计数据。
+安装 centos $ wget http://tar.goaccess.io/goaccess-1.2.tar.gz $ tar xvzf goaccess-1.2.tar.gz $ cd goaccess-1.2/ # 安装依赖 $ yum install ncurses-devel gcc $ yum install geoip-devel tokyocabinet-devel $ ./configure --enable-utf8 --enable-geoip=legacy # 编译 $ make &amp;amp;&amp;amp; make install $ ln -s /usr/local/bin/goaccess /usr/bin/goaccess  使用 goaccess原生支持的日志格式如下:
+ NCSA Combined Log Format NCSA Combined Log Format with Virtual Host Common Log Format (CLF) Common Log Format (CLF) with Virtual Host W3C Squid Native Format</description>
+    </item>
     
     <item>
       <title>在centos安装最新版Docker CE版本</title>
@@ -57,7 +68,7 @@ sudo date -s &amp;quot;$(wget -qSO- --max-redirect=0 google.com 2&amp;gt;&amp;am
       <pubDate>Sat, 27 Jan 2018 10:50:35 +0800</pubDate>
       
       <guid>https://narrowizard.github.io/docker/centos/</guid>
-      <description> Install docker on CentOS7 Update  经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照新版安装说明。 小版本更新只需要执行 yum install docker-engine 就可以了。如：从17.03更新到17.05。  Required  os: x64 kernel: 3.10+
+      <description> Install docker on CentOS7 Update  经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照新版安装说明。 小版本更新只需要执行 yum install docker-engine 就可以了。如：从17.03更新到17.05。经测试，从17.03升级到17.05后只需要重启container就可以了，并不会对原有的镜像及容器造成影响。  Required  os: x64 kernel: 3.10+
 $ uname -r
   Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &amp;lt;&amp;lt;-&#39;EOF&#39; [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
 { &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;&amp;lt;your accelerate address&amp;gt;&amp;quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &amp;lt;containerId&amp;gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &amp;lt;containerId&amp;gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk &#39;{print $1}&#39; | xargs docker rm # remove images that without name or tag docker images | grep none | awk &#39;{print $3}&#39; | xargs docker rmi  </description>

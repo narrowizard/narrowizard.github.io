@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NaRro  | fatal: protocol error: bad line length character</title>
+    <title>NaRro  | 使用goaccess生成可视化的访问日志</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -22,22 +22,18 @@
 
     
 
-    <meta property="og:title" content="fatal: protocol error: bad line length character" />
-<meta property="og:description" content="git的ssh客户端在收到错误信息后，会主动断开连接，并返回错误信息，但是信息内容不完整。
-这个时候通过以下方法获取错误信息。
-ssh &lt;user&gt;@&lt;host&gt; git-receive-pack &lt;path-to-git-repository&gt;  refer to:stackoverflow q8170436" />
+    <meta property="og:title" content="使用goaccess生成可视化的访问日志" />
+<meta property="og:description" content="简介 GoAccess是一个开源的实时web访问日志分析工具，实现了基于终端或浏览器的数据可视化，并且提供了有用的统计数据。
+安装 centos $ wget http://tar.goaccess.io/goaccess-1.2.tar.gz $ tar xvzf goaccess-1.2.tar.gz $ cd goaccess-1.2/ # 安装依赖 $ yum install ncurses-devel gcc $ yum install geoip-devel tokyocabinet-devel $ ./configure --enable-utf8 --enable-geoip=legacy # 编译 $ make &amp;&amp; make install $ ln -s /usr/local/bin/goaccess /usr/bin/goaccess  使用 goaccess原生支持的日志格式如下:
+ NCSA Combined Log Format NCSA Combined Log Format with Virtual Host Common Log Format (CLF) Common Log Format (CLF) with Virtual Host W3C Squid Native Format" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://narrowizard.github.io/centos/fatal-protocol-error-bad-line-length-character/" />
+<meta property="og:url" content="https://narrowizard.github.io/centos/goaccess/" />
 
 
 
-<meta property="article:published_time" content="2018-01-27T11:29:58&#43;08:00"/>
+<meta property="article:published_time" content="2018-02-25T13:07:21&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-01-27T11:29:58&#43;08:00"/>
-
-
-
-
+<meta property="article:modified_time" content="2018-02-25T13:07:21&#43;08:00"/>
 
 
 
@@ -45,23 +41,27 @@ ssh &lt;user&gt;@&lt;host&gt; git-receive-pack &lt;path-to-git-repository&gt;  r
 
 
 
-<meta itemprop="name" content="fatal: protocol error: bad line length character">
-<meta itemprop="description" content="git的ssh客户端在收到错误信息后，会主动断开连接，并返回错误信息，但是信息内容不完整。
-这个时候通过以下方法获取错误信息。
-ssh &lt;user&gt;@&lt;host&gt; git-receive-pack &lt;path-to-git-repository&gt;  refer to:stackoverflow q8170436">
 
 
-<meta itemprop="datePublished" content="2018-01-27T11:29:58&#43;08:00" />
-<meta itemprop="dateModified" content="2018-01-27T11:29:58&#43;08:00" />
-<meta itemprop="wordCount" content="9">
+
+
+<meta itemprop="name" content="使用goaccess生成可视化的访问日志">
+<meta itemprop="description" content="简介 GoAccess是一个开源的实时web访问日志分析工具，实现了基于终端或浏览器的数据可视化，并且提供了有用的统计数据。
+安装 centos $ wget http://tar.goaccess.io/goaccess-1.2.tar.gz $ tar xvzf goaccess-1.2.tar.gz $ cd goaccess-1.2/ # 安装依赖 $ yum install ncurses-devel gcc $ yum install geoip-devel tokyocabinet-devel $ ./configure --enable-utf8 --enable-geoip=legacy # 编译 $ make &amp;&amp; make install $ ln -s /usr/local/bin/goaccess /usr/bin/goaccess  使用 goaccess原生支持的日志格式如下:
+ NCSA Combined Log Format NCSA Combined Log Format with Virtual Host Common Log Format (CLF) Common Log Format (CLF) with Virtual Host W3C Squid Native Format">
+
+
+<meta itemprop="datePublished" content="2018-02-25T13:07:21&#43;08:00" />
+<meta itemprop="dateModified" content="2018-02-25T13:07:21&#43;08:00" />
+<meta itemprop="wordCount" content="102">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="fatal: protocol error: bad line length character"/>
-<meta name="twitter:description" content="git的ssh客户端在收到错误信息后，会主动断开连接，并返回错误信息，但是信息内容不完整。
-这个时候通过以下方法获取错误信息。
-ssh &lt;user&gt;@&lt;host&gt; git-receive-pack &lt;path-to-git-repository&gt;  refer to:stackoverflow q8170436"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="使用goaccess生成可视化的访问日志"/>
+<meta name="twitter:description" content="简介 GoAccess是一个开源的实时web访问日志分析工具，实现了基于终端或浏览器的数据可视化，并且提供了有用的统计数据。
+安装 centos $ wget http://tar.goaccess.io/goaccess-1.2.tar.gz $ tar xvzf goaccess-1.2.tar.gz $ cd goaccess-1.2/ # 安装依赖 $ yum install ncurses-devel gcc $ yum install geoip-devel tokyocabinet-devel $ ./configure --enable-utf8 --enable-geoip=legacy # 编译 $ make &amp;&amp; make install $ ln -s /usr/local/bin/goaccess /usr/bin/goaccess  使用 goaccess原生支持的日志格式如下:
+ NCSA Combined Log Format NCSA Combined Log Format with Virtual Host Common Log Format (CLF) Common Log Format (CLF) with Virtual Host W3C Squid Native Format"/>
 
   </head>
 
@@ -145,17 +145,62 @@ ssh &lt;user&gt;@&lt;host&gt; git-receive-pack &lt;path-to-git-repository&gt;  r
           CENTOS
         </p>
         <h1 class="f1">
-          fatal: protocol error: bad line length character
+          使用goaccess生成可视化的访问日志
         </h1>
       </header>
       <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
-        <p>git的ssh客户端在收到错误信息后，会主动断开连接，并返回错误信息，但是信息内容不完整。<br />
-这个时候通过以下方法获取错误信息。</p>
+        
 
-<pre><code class="language-shell">ssh &lt;user&gt;@&lt;host&gt; git-receive-pack &lt;path-to-git-repository&gt;
+<h2 id="简介">简介</h2>
+
+<p><a href="https://goaccess.io/">GoAccess</a>是一个开源的实时web访问日志分析工具，实现了基于终端或浏览器的数据可视化，并且提供了有用的统计数据。</p>
+
+<h2 id="安装">安装</h2>
+
+<h3 id="centos">centos</h3>
+
+<pre><code class="language-shell">$ wget http://tar.goaccess.io/goaccess-1.2.tar.gz
+$ tar xvzf goaccess-1.2.tar.gz
+$ cd goaccess-1.2/
+# 安装依赖
+$ yum install ncurses-devel gcc
+$ yum install geoip-devel tokyocabinet-devel
+$ ./configure --enable-utf8 --enable-geoip=legacy
+# 编译
+$ make &amp;&amp; make install
+$ ln -s /usr/local/bin/goaccess /usr/bin/goaccess
 </code></pre>
 
-<p>refer to:<a href="http://stackoverflow.com/questions/8170436/git-remote-error-fatal-protocol-error-bad-line-length-character-unab">stackoverflow q8170436</a></p>
+<h2 id="使用">使用</h2>
+
+<p>goaccess原生支持的日志格式如下:</p>
+
+<ul>
+<li>NCSA Combined Log Format</li>
+<li>NCSA Combined Log Format with Virtual Host</li>
+<li>Common Log Format (CLF)</li>
+<li>Common Log Format (CLF) with Virtual Host</li>
+<li>W3C</li>
+<li>Squid Native Format<br /></li>
+</ul>
+
+<p>如果日志符合上面的要求,直接使用goaccess就可以了.</p>
+
+<pre><code class="language-shell"># 打开goaccess的控制台
+$ goaccess -f pathOfYourAccessLog.log
+</code></pre>
+
+<h3 id="caddy">caddy</h3>
+
+<p>当然goaccess也支持自定义日志格式，我是用caddy作反向代理的，日志格式如下：</p>
+
+<pre><code>140.205.201.37 - - [17/May/2017:03:06:25 +0000] &quot;GET /admin/images/menu-current-arrow.gif HTTP/1.1&quot; 200 117
+</code></pre>
+
+<p>这个时候需要自定义日志格式(logFormat),其中格式的详细说明参考<a href="https://goaccess.io/man#custom-log">文档</a></p>
+
+<pre><code class="language-shell">$ goaccess --time-format=%H:%M:%S --log-format='%h %^[%d:%t %^] &quot;%r&quot; %s %b' --date-format=%d/%b/%Y -f pathOfYourAccessLog.log
+</code></pre>
 
       </div>
     </article>
@@ -176,14 +221,14 @@ ssh &lt;user&gt;@&lt;host&gt; git-receive-pack &lt;path-to-git-repository&gt;  r
       
         <li class="list f5 w-100 hover-bg-white nl1">
           
-          <a href="/centos/goaccess/" class="link ph2 pv2 db black">
+          <a href="/centos/goaccess/" class="link ph2 pv2 db black o-50">
             使用goaccess生成可视化的访问日志
           </a>
         </li>
       
         <li class="list f5 w-100 hover-bg-white nl1">
           
-          <a href="/centos/fatal-protocol-error-bad-line-length-character/" class="link ph2 pv2 db black o-50">
+          <a href="/centos/fatal-protocol-error-bad-line-length-character/" class="link ph2 pv2 db black">
             fatal: protocol error: bad line length character
           </a>
         </li>

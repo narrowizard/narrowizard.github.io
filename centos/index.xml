@@ -6,10 +6,21 @@
     <description>Recent content in Centos on NaRro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Sat, 27 Jan 2018 11:29:58 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 25 Feb 2018 13:07:21 +0800</lastBuildDate>
     
 	<atom:link href="https://narrowizard.github.io/centos/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用goaccess生成可视化的访问日志</title>
+      <link>https://narrowizard.github.io/centos/goaccess/</link>
+      <pubDate>Sun, 25 Feb 2018 13:07:21 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/centos/goaccess/</guid>
+      <description>简介 GoAccess是一个开源的实时web访问日志分析工具，实现了基于终端或浏览器的数据可视化，并且提供了有用的统计数据。
+安装 centos $ wget http://tar.goaccess.io/goaccess-1.2.tar.gz $ tar xvzf goaccess-1.2.tar.gz $ cd goaccess-1.2/ # 安装依赖 $ yum install ncurses-devel gcc $ yum install geoip-devel tokyocabinet-devel $ ./configure --enable-utf8 --enable-geoip=legacy # 编译 $ make &amp;amp;&amp;amp; make install $ ln -s /usr/local/bin/goaccess /usr/bin/goaccess  使用 goaccess原生支持的日志格式如下:
+ NCSA Combined Log Format NCSA Combined Log Format with Virtual Host Common Log Format (CLF) Common Log Format (CLF) with Virtual Host W3C Squid Native Format</description>
+    </item>
     
     <item>
       <title>fatal: protocol error: bad line length character</title>

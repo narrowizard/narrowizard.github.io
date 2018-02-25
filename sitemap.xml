@@ -3,6 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://narrowizard.github.io/centos/goaccess/</loc>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/docker/</loc>
+    <lastmod>2018-01-31T10:35:02+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://narrowizard.github.io/docker/centos2/</loc>
     <lastmod>2018-01-29T17:07:38+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -59,14 +73,7 @@
   
   <url>
     <loc>https://narrowizard.github.io/centos/</loc>
-    <lastmod>2018-01-27T11:29:58+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://narrowizard.github.io/docker/</loc>
-    <lastmod>2018-01-29T17:07:38+08:00</lastmod>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -100,7 +107,7 @@
   
   <url>
     <loc>https://narrowizard.github.io/</loc>
-    <lastmod>2018-01-29T17:07:38+08:00</lastmod>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
