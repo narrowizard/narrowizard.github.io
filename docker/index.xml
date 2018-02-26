@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>docker on NaRro</title>
+    <title>Docker on NaRro</title>
     <link>https://narrowizard.github.io/docker/</link>
-    <description>Recent content in docker on NaRro</description>
+    <description>Recent content in Docker on NaRro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Wed, 31 Jan 2018 10:35:02 +0800</lastBuildDate>

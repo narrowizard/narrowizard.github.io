@@ -18,7 +18,7 @@
       
       <guid>https://narrowizard.github.io/centos/goaccess/</guid>
       <description>简介 GoAccess是一个开源的实时web访问日志分析工具，实现了基于终端或浏览器的数据可视化，并且提供了有用的统计数据。
-安装 centos $ wget http://tar.goaccess.io/goaccess-1.2.tar.gz $ tar xvzf goaccess-1.2.tar.gz $ cd goaccess-1.2/ # 安装依赖 $ yum install ncurses-devel gcc $ yum install geoip-devel tokyocabinet-devel $ ./configure --enable-utf8 --enable-geoip=legacy # 编译 $ make &amp;amp;&amp;amp; make install $ ln -s /usr/local/bin/goaccess /usr/bin/goaccess  使用 goaccess原生支持的日志格式如下:
+安装 centos $ wget http://tar.goaccess.io/goaccess-1.2.tar.gz $ tar xvzf goaccess-1.2.tar.gz $ cd goaccess-1.2/ # 安装依赖 $ yum install ncurses-devel gcc $ yum install geoip-devel tokyocabinet-devel $ ./configure --enable-utf8 --enable-geoip=legacy # 编译 $ make &amp;amp;&amp;amp; make install $ ln -s /usr/local/bin/goaccess /usr/bin/goaccess  使用 goaccess预设了对以下日志格式的支持:
  NCSA Combined Log Format NCSA Combined Log Format with Virtual Host Common Log Format (CLF) Common Log Format (CLF) with Virtual Host W3C Squid Native Format</description>
     </item>
     

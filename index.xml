@@ -6,10 +6,20 @@
     <description>Recent content in 伟大的渺小 on NaRro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Sun, 25 Feb 2018 13:07:21 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Feb 2018 15:05:29 +0800</lastBuildDate>
     
 	<atom:link href="https://narrowizard.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Smart Interface使用说明</title>
+      <link>https://narrowizard.github.io/smartinterface/readme/</link>
+      <pubDate>Mon, 26 Feb 2018 15:05:29 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/smartinterface/readme/</guid>
+      <description> 简介 smart interface是一个基于tinygo和tinyts的接口文档管理系统。
+特性  项目私有化 项目订阅 接口日志 接口标签 数据统计 多语言支持(json,typescript,java,golang) 接口搜索(参数、标签搜索) api支持  开始使用  打开smart interface,地址: https://smartinterface.narro.me/login 注册帐号(注意需要验证邮箱)或者使用第三方帐号登录。 登录系统后新建一个项目,选择是否公开,填写项目名称以及项目描述。  创建项目后,参照下图进入项目编辑页面  项目编辑页面如下图所示  示例项目预览页   </description>
+    </item>
     
     <item>
       <title>使用goaccess生成可视化的访问日志</title>
@@ -18,7 +28,7 @@
       
       <guid>https://narrowizard.github.io/centos/goaccess/</guid>
       <description>简介 GoAccess是一个开源的实时web访问日志分析工具，实现了基于终端或浏览器的数据可视化，并且提供了有用的统计数据。
-安装 centos $ wget http://tar.goaccess.io/goaccess-1.2.tar.gz $ tar xvzf goaccess-1.2.tar.gz $ cd goaccess-1.2/ # 安装依赖 $ yum install ncurses-devel gcc $ yum install geoip-devel tokyocabinet-devel $ ./configure --enable-utf8 --enable-geoip=legacy # 编译 $ make &amp;amp;&amp;amp; make install $ ln -s /usr/local/bin/goaccess /usr/bin/goaccess  使用 goaccess原生支持的日志格式如下:
+安装 centos $ wget http://tar.goaccess.io/goaccess-1.2.tar.gz $ tar xvzf goaccess-1.2.tar.gz $ cd goaccess-1.2/ # 安装依赖 $ yum install ncurses-devel gcc $ yum install geoip-devel tokyocabinet-devel $ ./configure --enable-utf8 --enable-geoip=legacy # 编译 $ make &amp;amp;&amp;amp; make install $ ln -s /usr/local/bin/goaccess /usr/bin/goaccess  使用 goaccess预设了对以下日志格式的支持:
  NCSA Combined Log Format NCSA Combined Log Format with Virtual Host Common Log Format (CLF) Common Log Format (CLF) with Virtual Host W3C Squid Native Format</description>
     </item>
     
