@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>NaRro  | Install docker on CentOS7</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.34-DEV" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://narrowizard.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Install docker on CentOS7" />
+<meta property="og:description" content=" Install docker on CentOS7 阅读本文你需要了解(pre-knowledge)  基本的terminal命令  Update  经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照新版安装说明。 小版本更新只需要执行 yum install docker-engine 就可以了。如：从17.03更新到17.05。经测试，从17.03升级到17.05后只需要重启container就可以了，并不会对原有的镜像及容器造成影响。  Required  os: x64 kernel: 3.10&#43;
+$ uname -r
+  Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &lt;&lt;-&#39;EOF&#39; [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
+{ &quot;registry-mirrors&quot;: [&quot;&lt;your accelerate address&gt;&quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &lt;containerId&gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk &#39;{print $1}&#39; | xargs docker rm # remove images that without name or tag docker images | grep none | awk &#39;{print $3}&#39; | xargs docker rmi  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://narrowizard.github.io/devops/docker_centos/" />
+
+
+
+<meta property="article:published_time" content="2018-01-27T10:50:35&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-01-27T10:50:35&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Install docker on CentOS7">
+<meta itemprop="description" content=" Install docker on CentOS7 阅读本文你需要了解(pre-knowledge)  基本的terminal命令  Update  经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照新版安装说明。 小版本更新只需要执行 yum install docker-engine 就可以了。如：从17.03更新到17.05。经测试，从17.03升级到17.05后只需要重启container就可以了，并不会对原有的镜像及容器造成影响。  Required  os: x64 kernel: 3.10&#43;
+$ uname -r
+  Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &lt;&lt;-&#39;EOF&#39; [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
+{ &quot;registry-mirrors&quot;: [&quot;&lt;your accelerate address&gt;&quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &lt;containerId&gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk &#39;{print $1}&#39; | xargs docker rm # remove images that without name or tag docker images | grep none | awk &#39;{print $3}&#39; | xargs docker rmi  ">
+
+
+<meta itemprop="datePublished" content="2018-01-27T10:50:35&#43;08:00" />
+<meta itemprop="dateModified" content="2018-01-27T10:50:35&#43;08:00" />
+<meta itemprop="wordCount" content="125">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Install docker on CentOS7"/>
+<meta name="twitter:description" content=" Install docker on CentOS7 阅读本文你需要了解(pre-knowledge)  基本的terminal命令  Update  经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照新版安装说明。 小版本更新只需要执行 yum install docker-engine 就可以了。如：从17.03更新到17.05。经测试，从17.03升级到17.05后只需要重启container就可以了，并不会对原有的镜像及容器造成影响。  Required  os: x64 kernel: 3.10&#43;
+$ uname -r
+  Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &lt;&lt;-&#39;EOF&#39; [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
+{ &quot;registry-mirrors&quot;: [&quot;&lt;your accelerate address&gt;&quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &lt;containerId&gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk &#39;{print $1}&#39; | xargs docker rm # remove images that without name or tag docker images | grep none | awk &#39;{print $3}&#39; | xargs docker rmi  "/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://narrowizard.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      NaRro
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/backends/" title="Backends page">
+              Backends
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/devops/" title="DevOps page">
+              DevOps
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/others/" title="Others page">
+              Others
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+  <a href="https://github.com/narrowizard" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <p class="f6 b helvetica tracked">
+          DEVOPS
+        </p>
+        <h1 class="f1">
+          Install docker on CentOS7
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        
+
+<h1 id="install-docker-on-centos7-https-docs-docker-com-engine-installation-linux-centos"><a href="https://docs.docker.com/engine/installation/linux/centos/">Install docker on CentOS7</a></h1>
+
+<h2 id="阅读本文你需要了解-pre-knowledge">阅读本文你需要了解(pre-knowledge)</h2>
+
+<ol>
+<li>基本的terminal命令</li>
+</ol>
+
+<h2 id="update">Update</h2>
+
+<ul>
+<li>经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照<a href="/docker/centos2/">新版安装说明</a>。</li>
+<li>小版本更新只需要执行 <code>yum install docker-engine</code> 就可以了。如：从17.03更新到17.05。经测试，从17.03升级到17.05后只需要重启container就可以了，并不会对原有的镜像及容器造成影响。</li>
+</ul>
+
+<h2 id="required">Required</h2>
+
+<ol>
+<li>os: x64</li>
+<li>kernel: 3.10+<br />
+<code>$ uname -r</code><br /></li>
+</ol>
+
+<h2 id="step">Step</h2>
+
+<pre><code class="language-shell">$ yum makecache
+
+$ yum update
+
+$ tee /etc/yum.repos.d/docker.repo &lt;&lt;-'EOF'
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/centos/7/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+EOF
+
+$ yum install docker-engine
+
+$ systemctl enable docker.service
+
+$ systemctl start docker
+</code></pre>
+
+<h2 id="换docker源">换docker源</h2>
+
+<p>使用配置文件<code>/etc/docker/daemon.json</code>，需要docker版本1.10以上</p>
+
+<pre><code class="language-json">{
+    &quot;registry-mirrors&quot;: [&quot;&lt;your accelerate address&gt;&quot;]
+}
+</code></pre>
+
+<h2 id="常用命令">常用命令</h2>
+
+<pre><code class="language-shell"># 使用root打开docker bash
+docker exec -u 0 -it container_name bash
+# 从container复制文件到host
+docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target 
+# 从host复制文件到container
+docker cp /host/path/target &lt;containerId&gt;:/file/path/within/container 
+# remove Exited container
+docker ps -a | grep Exited | awk '{print $1}' | xargs docker rm
+# remove images that without name or tag 
+docker images | grep none | awk '{print $3}' | xargs docker rmi
+</code></pre>
+
+      </div>
+    </article>
+    <aside class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+  <div class="bg-light-gray pa3">
+    <ul>
+      <li class="list b mb3">
+        6 More Devops
+      </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/goaccess/" class="link ph2 pv2 db black">
+            使用goaccess生成可视化的访问日志
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/docker_centos2/" class="link ph2 pv2 db black">
+            在centos安装最新版Docker CE版本
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/fatal-protocol-error-bad-line-length-character/" class="link ph2 pv2 db black">
+            fatal: protocol error: bad line length character
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/centos_config/" class="link ph2 pv2 db black">
+            centos 常用配置
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/docker_centos/" class="link ph2 pv2 db black o-50">
+            Install docker on CentOS7
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/gitlab_migration/" class="link ph2 pv2 db black">
+            gitlab迁移日志
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/build_hugo/" class="link ph2 pv2 db black">
+            使用hugo搭建静态markdown博客
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+    </aside>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://narrowizard.github.io" >
+    &copy; 2018 NaRro
+  </a>
+  
+
+
+
+
+
+
+
+  <a href="https://github.com/narrowizard" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  </div>
+</footer>
+
+    <script src="https://narrowizard.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

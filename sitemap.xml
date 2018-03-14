@@ -3,80 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://narrowizard.github.io/smartinterface/readme/</loc>
+    <loc>https://narrowizard.github.io/backends/separate_end/</loc>
+    <lastmod>2018-03-14T08:59:30+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/others/smartinterface/</loc>
     <lastmod>2018-02-26T15:05:29+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/centos/goaccess/</loc>
+    <loc>https://narrowizard.github.io/devops/goaccess/</loc>
     <lastmod>2018-02-25T13:07:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/docker/</loc>
+    <loc>https://narrowizard.github.io/devops/</loc>
     <lastmod>2018-01-31T10:35:02+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/gitlab/</loc>
-    <lastmod>2018-01-31T10:35:02+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://narrowizard.github.io/docker/centos2/</loc>
+    <loc>https://narrowizard.github.io/devops/docker_centos2/</loc>
     <lastmod>2018-01-29T17:07:38+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/centos/fatal-protocol-error-bad-line-length-character/</loc>
+    <loc>https://narrowizard.github.io/devops/fatal-protocol-error-bad-line-length-character/</loc>
     <lastmod>2018-01-27T11:29:58+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/centos/config/</loc>
+    <loc>https://narrowizard.github.io/devops/centos_config/</loc>
     <lastmod>2018-01-27T11:27:27+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/photo/exif/</loc>
+    <loc>https://narrowizard.github.io/others/exif/</loc>
     <lastmod>2018-01-27T11:22:30+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/docker/centos/</loc>
+    <loc>https://narrowizard.github.io/devops/docker_centos/</loc>
     <lastmod>2018-01-27T10:50:35+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/gitlab/migration/</loc>
+    <loc>https://narrowizard.github.io/devops/gitlab_migration/</loc>
     <lastmod>2018-01-27T10:42:19+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/hugo/build/</loc>
+    <loc>https://narrowizard.github.io/devops/build_hugo/</loc>
     <lastmod>2018-01-26T15:58:38+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/backends/</loc>
+    <lastmod>2018-03-14T08:59:30+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -86,28 +93,7 @@
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/centos/</loc>
-    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://narrowizard.github.io/hugo/</loc>
-    <lastmod>2018-01-26T15:58:38+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://narrowizard.github.io/photo/</loc>
-    <lastmod>2018-01-27T11:22:30+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://narrowizard.github.io/smartinterface/</loc>
+    <loc>https://narrowizard.github.io/others/</loc>
     <lastmod>2018-02-26T15:05:29+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
@@ -121,7 +107,7 @@
   
   <url>
     <loc>https://narrowizard.github.io/</loc>
-    <lastmod>2018-02-26T15:05:29+08:00</lastmod>
+    <lastmod>2018-03-14T08:59:30+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

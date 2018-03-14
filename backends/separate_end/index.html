@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>NaRro  | web前后端分离式开发实践</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.34-DEV" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://narrowizard.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="web前后端分离式开发实践" />
+<meta property="og:description" content="阅读本文你需要了解(pre-knowledge)  javascript语法 http协议的基本知识  简述 我接触前后端分离这个概念, 最早是在使用ASP.NET MVC4的时候. 那时候主要做的就是把一个web项目分层, M-model, V-view, C-controller各司其职, 配合的也是非常好. 但是前后端分离的没那么彻底, 项目还是一整个项目.
+随着vuejs, angular2, reactjs这些框架的逐渐成熟, 生态圈日渐完善, 前后端分离这个概念就变的越来越火了. 这些框架的发展, 算是给前端开发带来了革命性的变更(主要得益于HTML的新特性). 下面我就想讲一讲基于这些前端框架的&rdquo;新型&rdquo;前后端分离.
+归根结底, 不管是哪种程度的分离, 最终目标都是为了解决以下一些问题(如不完善, 欢迎补充):
+ 解放开发人员, 使其能专注于各自的业务领域. 前端不用再搭建后端环境, 后端只需要专注api开发. 前后端项目分开部署, 后端不再需要对前端资源进行打包、压缩操作。  生产模式架构 下面我以 react &#43; express(nodejs) &#43; nirvana(go) 为例说明一种实用的前后端分离架构. express中间层 根据上图我们可以得知, express项目只需要实现两个功能.
+ 将react项目所在的目录设置为静态路由. 按需转发api请求.
+  首先, 我们来看一下整个express项目的目录结构:
+. ├── app # 前端静态目录 │ └── build # react打包后的文件 ├── app.js # express项目代码 ├── bin │ └── www # express项目入口文件 └── package." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://narrowizard.github.io/backends/separate_end/" />
+
+
+
+<meta property="article:published_time" content="2018-03-14T08:59:30&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-03-14T08:59:30&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="web前后端分离式开发实践">
+<meta itemprop="description" content="阅读本文你需要了解(pre-knowledge)  javascript语法 http协议的基本知识  简述 我接触前后端分离这个概念, 最早是在使用ASP.NET MVC4的时候. 那时候主要做的就是把一个web项目分层, M-model, V-view, C-controller各司其职, 配合的也是非常好. 但是前后端分离的没那么彻底, 项目还是一整个项目.
+随着vuejs, angular2, reactjs这些框架的逐渐成熟, 生态圈日渐完善, 前后端分离这个概念就变的越来越火了. 这些框架的发展, 算是给前端开发带来了革命性的变更(主要得益于HTML的新特性). 下面我就想讲一讲基于这些前端框架的&rdquo;新型&rdquo;前后端分离.
+归根结底, 不管是哪种程度的分离, 最终目标都是为了解决以下一些问题(如不完善, 欢迎补充):
+ 解放开发人员, 使其能专注于各自的业务领域. 前端不用再搭建后端环境, 后端只需要专注api开发. 前后端项目分开部署, 后端不再需要对前端资源进行打包、压缩操作。  生产模式架构 下面我以 react &#43; express(nodejs) &#43; nirvana(go) 为例说明一种实用的前后端分离架构. express中间层 根据上图我们可以得知, express项目只需要实现两个功能.
+ 将react项目所在的目录设置为静态路由. 按需转发api请求.
+  首先, 我们来看一下整个express项目的目录结构:
+. ├── app # 前端静态目录 │ └── build # react打包后的文件 ├── app.js # express项目代码 ├── bin │ └── www # express项目入口文件 └── package.">
+
+
+<meta itemprop="datePublished" content="2018-03-14T08:59:30&#43;08:00" />
+<meta itemprop="dateModified" content="2018-03-14T08:59:30&#43;08:00" />
+<meta itemprop="wordCount" content="145">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="web前后端分离式开发实践"/>
+<meta name="twitter:description" content="阅读本文你需要了解(pre-knowledge)  javascript语法 http协议的基本知识  简述 我接触前后端分离这个概念, 最早是在使用ASP.NET MVC4的时候. 那时候主要做的就是把一个web项目分层, M-model, V-view, C-controller各司其职, 配合的也是非常好. 但是前后端分离的没那么彻底, 项目还是一整个项目.
+随着vuejs, angular2, reactjs这些框架的逐渐成熟, 生态圈日渐完善, 前后端分离这个概念就变的越来越火了. 这些框架的发展, 算是给前端开发带来了革命性的变更(主要得益于HTML的新特性). 下面我就想讲一讲基于这些前端框架的&rdquo;新型&rdquo;前后端分离.
+归根结底, 不管是哪种程度的分离, 最终目标都是为了解决以下一些问题(如不完善, 欢迎补充):
+ 解放开发人员, 使其能专注于各自的业务领域. 前端不用再搭建后端环境, 后端只需要专注api开发. 前后端项目分开部署, 后端不再需要对前端资源进行打包、压缩操作。  生产模式架构 下面我以 react &#43; express(nodejs) &#43; nirvana(go) 为例说明一种实用的前后端分离架构. express中间层 根据上图我们可以得知, express项目只需要实现两个功能.
+ 将react项目所在的目录设置为静态路由. 按需转发api请求.
+  首先, 我们来看一下整个express项目的目录结构:
+. ├── app # 前端静态目录 │ └── build # react打包后的文件 ├── app.js # express项目代码 ├── bin │ └── www # express项目入口文件 └── package."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://narrowizard.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      NaRro
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/backends/" title="Backends page">
+              Backends
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/devops/" title="DevOps page">
+              DevOps
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/others/" title="Others page">
+              Others
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+  <a href="https://github.com/narrowizard" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <p class="f6 b helvetica tracked">
+          BACKENDS
+        </p>
+        <h1 class="f1">
+          web前后端分离式开发实践
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        
+
+<h2 id="阅读本文你需要了解-pre-knowledge">阅读本文你需要了解(pre-knowledge)</h2>
+
+<ol>
+<li>javascript语法</li>
+<li>http协议的基本知识</li>
+</ol>
+
+<h2 id="简述">简述</h2>
+
+<p>我接触<code>前后端分离</code>这个概念, 最早是在使用<code>ASP.NET MVC4</code>的时候. 那时候主要做的就是把一个web项目分层, M-model, V-view, C-controller各司其职, 配合的也是非常好. 但是前后端分离的没那么彻底, 项目还是一整个项目.<br />
+随着<code>vuejs</code>, <code>angular2</code>, <code>reactjs</code>这些框架的逐渐成熟, 生态圈日渐完善, <code>前后端分离</code>这个概念就变的越来越火了. 这些框架的发展, 算是给前端开发带来了革命性的变更(主要得益于HTML的新特性). 下面我就想讲一讲基于这些前端框架的&rdquo;新型&rdquo;<code>前后端分离</code>.<br />
+归根结底, 不管是哪种程度的分离, 最终目标都是为了解决以下一些问题(如不完善, 欢迎补充):</p>
+
+<ul>
+<li>解放开发人员, 使其能专注于各自的业务领域. 前端不用再搭建后端环境, 后端只需要专注api开发.</li>
+<li>前后端项目分开部署, 后端不再需要对前端资源进行打包、压缩操作。</li>
+</ul>
+
+<h2 id="生产模式架构">生产模式架构</h2>
+
+<p>下面我以 react + express(nodejs) + nirvana(go) 为例说明一种实用的<code>前后端分离</code>架构.
+<img src="/images/separate_arch.png" alt="架构图" /></p>
+
+<h3 id="express中间层">express中间层</h3>
+
+<p>根据上图我们可以得知, express项目只需要实现两个功能.</p>
+
+<ol>
+<li>将react项目所在的目录设置为静态路由.</li>
+<li>按需转发api请求.<br /></li>
+</ol>
+
+<p>首先, 我们来看一下整个express项目的目录结构:</p>
+
+<pre><code>.
+├── app           # 前端静态目录
+│   └── build     # react打包后的文件
+├── app.js        # express项目代码
+├── bin           
+│   └── www       # express项目入口文件
+└── package.json
+</code></pre>
+
+<p>我使用了<code>express-generator</code>生成express项目目录, 并删去了一些不相关的内容. 剩下的文件说明如下:</p>
+
+<ul>
+<li><code>bin/www</code>文件是项目的入口, 里面包含了一些环境变量的判断(如:PORT), 并根据<code>app.js</code>的内容创建一个http服务器.</li>
+
+<li><p><code>app.js</code>定义了http服务器的路由, 请求处理器等内容, 代码如下:</p>
+
+<pre><code class="language-js">// ...
+var express = require('express');
+var proxy = require('express-http-proxy');
+
+var app = express();
+
+app.use('/', express.static('app/build'));
+app.use('/api', proxy('localhost:8081'));
+// ...
+module.exports = app;
+</code></pre>
+
+<p>我在app.js中定义了两个路由, 一个就是<code>app.use('/', express.static('app/build'));</code>, 为编译react项目得到的静态目录创建了一个静态路由, 另一个则是把<code>/api</code>路由段的请求转发到了另一个服务端<code>localhost:8081</code>上. 你可以根据你的具体需求在这里定义更多的内容.</p></li>
+</ul>
+
+<h2 id="开发模式">开发模式</h2>
+
+<p>我们知道, react在开发模式下提供了一个用于开发的服务端. 主要功能包括监听文件变化、自动编译、自动刷新浏览器等. 结合上述架构, 我们在开发模式下想要请求服务端api(这里的服务端指express中间层), 需要在react项目的<code>package.json</code>文件中加入一个配置项. <code>&quot;proxy&quot;: &quot;http://localhost:8080&quot;</code>, 假设我们的express中间层项目监听8080端口, react开发服务监听3000端口, 增加了这个配置项之后, react开发服务会将除了静态资源以外的http请求转发到<code>localhost:8080</code>这个地址(也就是我们的express中间层). 这样, 我们就能在兼容上述架构的基础上, 使用react方便的开发服务. 开发模式的架构如下图所示:<br />
+<img src="/images/separate_arch_dev.png" alt="开发模式架构图" /></p>
+
+<h2 id="扩展">扩展</h2>
+
+<p>本文以react + express(nodejs) + nirvana(go)作为示例, 并不说明这些技术是必须的, 你可以根据你的喜好替换任意的技术. 如: 你可以用任何实现了前端路由的框架(eg: vuejs,ng2)代替<code>react</code>, 也可以用任何具备标准http服务能力的技术代替<code>express中间层</code>, <code>api层</code>则可以采用任何你喜欢的后端技术.<br />
+得益于开源社区的贡献, 已经有社区开发者实现了基于nodejs的react的服务端渲染, 使用nodejs + react是一个不错的选择. 关于服务端渲染的内容, 不在本文的论述范围之内.</p>
+
+      </div>
+    </article>
+    <aside class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+
+    </aside>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://narrowizard.github.io" >
+    &copy; 2018 NaRro
+  </a>
+  
+
+
+
+
+
+
+
+  <a href="https://github.com/narrowizard" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  </div>
+</footer>
+
+    <script src="https://narrowizard.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

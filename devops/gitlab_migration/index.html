@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>NaRro  | gitlab迁移日志</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.34-DEV" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://narrowizard.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="gitlab迁移日志" />
+<meta property="og:description" content=" 由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。
+旧服务器信息 当时部署gitlab是直接使用官方的docker镜像的，版本为8.14.0-ce.0
+使用外置的postgresql，也是用docker跑的一个container，版本为9.6.1
+ postgres的data目录在/srv/data/db gitlab的data目录在/srv/data/gitlab/data gitlab的config目录在/srv/data/gitlab/config gitlab的log目录在/srv/data/gitlab/log  迁移步骤 原本可以直接使用gitlab的迁移工具备份并且迁移的，但是由于使用了外置的postgresql，导致数据库版本不匹配，所以只能手动迁移了。
+ 首先迁移数据库，直接将旧的数据库目录复制到新的服务器上，重新用docker跑一个新的postgresql container，并把数据目录挂载起来就ok了。 使用gitlab提供的迁移工具进行迁移，但是跳过数据库。  # 备份 gitlab-rake gitlab:backup:create SKIP=db # 恢复 # 停止相关数据连接服务 gitlab-ctl stop unicorn gitlab-ctl stop sidekiq # 从1393513186编号备份中恢复 gitlab-rake gitlab:backup:restore BACKUP=1393513186 # 启动Gitlab sudo gitlab-ctl start  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://narrowizard.github.io/devops/gitlab_migration/" />
+
+
+
+<meta property="article:published_time" content="2018-01-27T10:42:19&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-01-27T10:42:19&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="gitlab迁移日志">
+<meta itemprop="description" content=" 由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。
+旧服务器信息 当时部署gitlab是直接使用官方的docker镜像的，版本为8.14.0-ce.0
+使用外置的postgresql，也是用docker跑的一个container，版本为9.6.1
+ postgres的data目录在/srv/data/db gitlab的data目录在/srv/data/gitlab/data gitlab的config目录在/srv/data/gitlab/config gitlab的log目录在/srv/data/gitlab/log  迁移步骤 原本可以直接使用gitlab的迁移工具备份并且迁移的，但是由于使用了外置的postgresql，导致数据库版本不匹配，所以只能手动迁移了。
+ 首先迁移数据库，直接将旧的数据库目录复制到新的服务器上，重新用docker跑一个新的postgresql container，并把数据目录挂载起来就ok了。 使用gitlab提供的迁移工具进行迁移，但是跳过数据库。  # 备份 gitlab-rake gitlab:backup:create SKIP=db # 恢复 # 停止相关数据连接服务 gitlab-ctl stop unicorn gitlab-ctl stop sidekiq # 从1393513186编号备份中恢复 gitlab-rake gitlab:backup:restore BACKUP=1393513186 # 启动Gitlab sudo gitlab-ctl start  ">
+
+
+<meta itemprop="datePublished" content="2018-01-27T10:42:19&#43;08:00" />
+<meta itemprop="dateModified" content="2018-01-27T10:42:19&#43;08:00" />
+<meta itemprop="wordCount" content="38">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="gitlab迁移日志"/>
+<meta name="twitter:description" content=" 由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。
+旧服务器信息 当时部署gitlab是直接使用官方的docker镜像的，版本为8.14.0-ce.0
+使用外置的postgresql，也是用docker跑的一个container，版本为9.6.1
+ postgres的data目录在/srv/data/db gitlab的data目录在/srv/data/gitlab/data gitlab的config目录在/srv/data/gitlab/config gitlab的log目录在/srv/data/gitlab/log  迁移步骤 原本可以直接使用gitlab的迁移工具备份并且迁移的，但是由于使用了外置的postgresql，导致数据库版本不匹配，所以只能手动迁移了。
+ 首先迁移数据库，直接将旧的数据库目录复制到新的服务器上，重新用docker跑一个新的postgresql container，并把数据目录挂载起来就ok了。 使用gitlab提供的迁移工具进行迁移，但是跳过数据库。  # 备份 gitlab-rake gitlab:backup:create SKIP=db # 恢复 # 停止相关数据连接服务 gitlab-ctl stop unicorn gitlab-ctl stop sidekiq # 从1393513186编号备份中恢复 gitlab-rake gitlab:backup:restore BACKUP=1393513186 # 启动Gitlab sudo gitlab-ctl start  "/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://narrowizard.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      NaRro
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/backends/" title="Backends page">
+              Backends
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/devops/" title="DevOps page">
+              DevOps
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/others/" title="Others page">
+              Others
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+  <a href="https://github.com/narrowizard" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <p class="f6 b helvetica tracked">
+          DEVOPS
+        </p>
+        <h1 class="f1">
+          gitlab迁移日志
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        
+
+<p>由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。</p>
+
+<h2 id="旧服务器信息">旧服务器信息</h2>
+
+<p>当时部署gitlab是直接使用官方的docker镜像的，版本为8.14.0-ce.0<br />
+使用外置的postgresql，也是用docker跑的一个container，版本为9.6.1</p>
+
+<ul>
+<li>postgres的data目录在/srv/data/db</li>
+<li>gitlab的data目录在/srv/data/gitlab/data</li>
+<li>gitlab的config目录在/srv/data/gitlab/config</li>
+<li>gitlab的log目录在/srv/data/gitlab/log</li>
+</ul>
+
+<h2 id="迁移步骤">迁移步骤</h2>
+
+<p>原本可以直接使用gitlab的迁移工具备份并且迁移的，但是由于使用了外置的postgresql，导致数据库版本不匹配，所以只能手动迁移了。</p>
+
+<ol>
+<li>首先迁移数据库，直接将旧的数据库目录复制到新的服务器上，重新用docker跑一个新的postgresql container，并把数据目录挂载起来就ok了。</li>
+<li>使用gitlab提供的迁移工具进行迁移，但是跳过数据库。</li>
+</ol>
+
+<pre><code class="language-shell"># 备份
+gitlab-rake gitlab:backup:create SKIP=db
+# 恢复
+# 停止相关数据连接服务
+gitlab-ctl stop unicorn
+gitlab-ctl stop sidekiq
+
+# 从1393513186编号备份中恢复
+gitlab-rake gitlab:backup:restore BACKUP=1393513186
+
+# 启动Gitlab
+sudo gitlab-ctl start
+</code></pre>
+
+      </div>
+    </article>
+    <aside class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+  <div class="bg-light-gray pa3">
+    <ul>
+      <li class="list b mb3">
+        6 More Devops
+      </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/goaccess/" class="link ph2 pv2 db black">
+            使用goaccess生成可视化的访问日志
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/docker_centos2/" class="link ph2 pv2 db black">
+            在centos安装最新版Docker CE版本
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/fatal-protocol-error-bad-line-length-character/" class="link ph2 pv2 db black">
+            fatal: protocol error: bad line length character
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/centos_config/" class="link ph2 pv2 db black">
+            centos 常用配置
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/docker_centos/" class="link ph2 pv2 db black">
+            Install docker on CentOS7
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/gitlab_migration/" class="link ph2 pv2 db black o-50">
+            gitlab迁移日志
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/devops/build_hugo/" class="link ph2 pv2 db black">
+            使用hugo搭建静态markdown博客
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+    </aside>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://narrowizard.github.io" >
+    &copy; 2018 NaRro
+  </a>
+  
+
+
+
+
+
+
+
+  <a href="https://github.com/narrowizard" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  </div>
+</footer>
+
+    <script src="https://narrowizard.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>
