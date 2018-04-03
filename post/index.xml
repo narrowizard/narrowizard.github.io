@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>伟大的渺小 on NaRro</title>
+    <link>https://narrowizard.github.io/post/</link>
+    <description>Recent content in 伟大的渺小 on NaRro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Wed, 14 Mar 2018 08:59:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://narrowizard.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>web前后端分离式开发实践</title>
+      <link>https://narrowizard.github.io/post/backends/separate_end/</link>
+      <pubDate>Wed, 14 Mar 2018 08:59:30 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/backends/separate_end/</guid>
+      <description>阅读本文你需要了解(pre-knowledge) javascript语法 http协议的基本知识 简述 我接触前后端分离这个概念, 最早是在使用AS</description>
+    </item>
+    
+    <item>
+      <title>Smart Interface使用说明</title>
+      <link>https://narrowizard.github.io/post/others/smartinterface/</link>
+      <pubDate>Mon, 26 Feb 2018 15:05:29 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/others/smartinterface/</guid>
+      <description>简介 smart interface是一个基于tinygo和tinyts的接口文档管理系统。 特性 项目私有化 项目订阅 接口日志 接口标签 数据统计 多语言支持(j</description>
+    </item>
+    
+    <item>
+      <title>照片的EXIF属性信息</title>
+      <link>https://narrowizard.github.io/post/others/exif/</link>
+      <pubDate>Sat, 27 Jan 2018 11:22:30 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/others/exif/</guid>
+      <description>Orientation(方向) MeteringMode(测光模式) 0 未知 1 平均 2 偏中心平均 3 点 4 多点 5 图案(多重) 6 部分 255 其他 Flash(闪</description>
+    </item>
+    
+  </channel>
+</rss>

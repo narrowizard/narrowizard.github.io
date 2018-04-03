@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Install docker on CentOS7 - NaRro</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="NaRro" />
+  <meta name="description" content="Install docker on CentOS7 阅读本文你需要了解(pre-knowledge) 基本的terminal命令 Update 经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发" />
+
+  <meta name="keywords" content="narro, blog, web, frontend, docker, devOps, backend, typescript, javascript, golang" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.38" />
+
+
+<link rel="canonical" href="https://narrowizard.github.io/post/devops/docker_centos/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Install docker on CentOS7" />
+<meta property="og:description" content="Install docker on CentOS7 阅读本文你需要了解(pre-knowledge) 基本的terminal命令 Update 经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://narrowizard.github.io/post/devops/docker_centos/" />
+
+
+
+<meta property="article:published_time" content="2018-01-27T10:50:35&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-01-27T10:50:35&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Install docker on CentOS7">
+<meta itemprop="description" content="Install docker on CentOS7 阅读本文你需要了解(pre-knowledge) 基本的terminal命令 Update 经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发">
+
+
+<meta itemprop="datePublished" content="2018-01-27T10:50:35&#43;08:00" />
+<meta itemprop="dateModified" content="2018-01-27T10:50:35&#43;08:00" />
+<meta itemprop="wordCount" content="373">
+
+
+
+<meta itemprop="keywords" content="docker,centos,centos7," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install docker on CentOS7"/>
+<meta name="twitter:description" content="Install docker on CentOS7 阅读本文你需要了解(pre-knowledge) 基本的terminal命令 Update 经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">NaRro</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">NaRro</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Install docker on CentOS7</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-01-27 </span>
+        <div class="post-category">
+            
+              <a href="/categories/devops/"> DevOps </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#install-docker-on-centos7-https-docs-docker-com-engine-installation-linux-centos"><a href="https://docs.docker.com/engine/installation/linux/centos/">Install docker on CentOS7</a></a>
+<ul>
+<li><a href="#阅读本文你需要了解-pre-knowledge">阅读本文你需要了解(pre-knowledge)</a></li>
+<li><a href="#update">Update</a></li>
+<li><a href="#required">Required</a></li>
+<li><a href="#step">Step</a></li>
+<li><a href="#换docker源">换docker源</a></li>
+<li><a href="#常用命令">常用命令</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h1 id="install-docker-on-centos7-https-docs-docker-com-engine-installation-linux-centos"><a href="https://docs.docker.com/engine/installation/linux/centos/">Install docker on CentOS7</a></h1>
+
+<h2 id="阅读本文你需要了解-pre-knowledge">阅读本文你需要了解(pre-knowledge)</h2>
+
+<ol>
+<li>基本的terminal命令</li>
+</ol>
+
+<h2 id="update">Update</h2>
+
+<ul>
+<li>经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照<a href="/docker/centos2/">新版安装说明</a>。</li>
+<li>小版本更新只需要执行 <code>yum install docker-engine</code> 就可以了。如：从17.03更新到17.05。经测试，从17.03升级到17.05后只需要重启container就可以了，并不会对原有的镜像及容器造成影响。</li>
+</ul>
+
+<h2 id="required">Required</h2>
+
+<ol>
+<li>os: x64</li>
+<li>kernel: 3.10+<br />
+<code>$ uname -r</code><br /></li>
+</ol>
+
+<h2 id="step">Step</h2>
+
+<pre><code class="language-shell">$ yum makecache
+
+$ yum update
+
+$ tee /etc/yum.repos.d/docker.repo &lt;&lt;-'EOF'
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/centos/7/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+EOF
+
+$ yum install docker-engine
+
+$ systemctl enable docker.service
+
+$ systemctl start docker
+</code></pre>
+
+<h2 id="换docker源">换docker源</h2>
+
+<p>使用配置文件<code>/etc/docker/daemon.json</code>，需要docker版本1.10以上</p>
+
+<pre><code class="language-json">{
+    &quot;registry-mirrors&quot;: [&quot;&lt;your accelerate address&gt;&quot;]
+}
+</code></pre>
+
+<h2 id="常用命令">常用命令</h2>
+
+<pre><code class="language-shell"># 使用root打开docker bash
+docker exec -u 0 -it container_name bash
+# 从container复制文件到host
+docker cp &lt;containerId&gt;:/file/path/within/container /host/path/target 
+# 从host复制文件到container
+docker cp /host/path/target &lt;containerId&gt;:/file/path/within/container 
+# remove Exited container
+docker ps -a | grep Exited | awk '{print $1}' | xargs docker rm
+# remove images that without name or tag 
+docker images | grep none | awk '{print $3}' | xargs docker rmi
+</code></pre>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">NaRro</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-01-27</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/docker/">docker</a>
+          
+          <a href="/tags/centos/">centos</a>
+          
+          <a href="/tags/centos7/">centos7</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/devops/centos_config/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">centos 常用配置</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/devops/gitlab_migration/">
+            <span class="next-text nav-default">gitlab迁移日志</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:501xs05@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/narrowizard" class="iconfont icon-github" title="github"></a>
+  <a href="https://narrowizard.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">NaRro</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-100396165-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

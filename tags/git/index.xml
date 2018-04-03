@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on NaRro</title>
+    <link>https://narrowizard.github.io/tags/git/</link>
+    <description>Recent content in Git on NaRro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Sat, 27 Jan 2018 11:29:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://narrowizard.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>fatal: protocol error: bad line length character</title>
+      <link>https://narrowizard.github.io/post/devops/fatal-protocol-error-bad-line-length-character/</link>
+      <pubDate>Sat, 27 Jan 2018 11:29:58 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/devops/fatal-protocol-error-bad-line-length-character/</guid>
+      <description>git的ssh客户端在收到错误信息后，会主动断开连接，并返回错误信息，但是信息内容不完整。 这个时候通过以下方法获取错误信息。 ssh &amp;lt;user&amp;gt;@&amp;lt;host&amp;gt; git-receive-pack &amp;lt;path-to-git-repository&amp;gt; refer to:stackoverflow q8170436</description>
+    </item>
+    
+  </channel>
+</rss>

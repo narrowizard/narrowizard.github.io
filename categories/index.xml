@@ -6,9 +6,46 @@
     <description>Recent content in Categories on NaRro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
+    <lastBuildDate>Wed, 14 Mar 2018 08:59:30 +0800</lastBuildDate>
     
 	<atom:link href="https://narrowizard.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Backends</title>
+      <link>https://narrowizard.github.io/categories/backends/</link>
+      <pubDate>Wed, 14 Mar 2018 08:59:30 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/categories/backends/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>https://narrowizard.github.io/categories/devops/</link>
+      <pubDate>Sun, 25 Feb 2018 13:07:21 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Frontends</title>
+      <link>https://narrowizard.github.io/categories/frontends/</link>
+      <pubDate>Wed, 14 Mar 2018 08:59:30 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/categories/frontends/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>摄影</title>
+      <link>https://narrowizard.github.io/categories/%E6%91%84%E5%BD%B1/</link>
+      <pubDate>Sat, 27 Jan 2018 11:22:30 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/categories/%E6%91%84%E5%BD%B1/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>web前后端分离式开发实践 - NaRro</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="NaRro" />
+  <meta name="description" content="阅读本文你需要了解(pre-knowledge) javascript语法 http协议的基本知识 简述 我接触前后端分离这个概念, 最早是在使用AS" />
+
+  <meta name="keywords" content="narro, blog, web, frontend, docker, devOps, backend, typescript, javascript, golang" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.38" />
+
+
+<link rel="canonical" href="https://narrowizard.github.io/post/backends/separate_end/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="web前后端分离式开发实践" />
+<meta property="og:description" content="阅读本文你需要了解(pre-knowledge) javascript语法 http协议的基本知识 简述 我接触前后端分离这个概念, 最早是在使用AS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://narrowizard.github.io/post/backends/separate_end/" />
+
+
+
+<meta property="article:published_time" content="2018-03-14T08:59:30&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-03-14T08:59:30&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="web前后端分离式开发实践">
+<meta itemprop="description" content="阅读本文你需要了解(pre-knowledge) javascript语法 http协议的基本知识 简述 我接触前后端分离这个概念, 最早是在使用AS">
+
+
+<meta itemprop="datePublished" content="2018-03-14T08:59:30&#43;08:00" />
+<meta itemprop="dateModified" content="2018-03-14T08:59:30&#43;08:00" />
+<meta itemprop="wordCount" content="1458">
+
+
+
+<meta itemprop="keywords" content="前后端分离,web," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="web前后端分离式开发实践"/>
+<meta name="twitter:description" content="阅读本文你需要了解(pre-knowledge) javascript语法 http协议的基本知识 简述 我接触前后端分离这个概念, 最早是在使用AS"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">NaRro</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">NaRro</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">web前后端分离式开发实践</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-03-14 </span>
+        <div class="post-category">
+            
+              <a href="/categories/frontends/"> frontends </a>
+            
+              <a href="/categories/backends/"> backends </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#阅读本文你需要了解-pre-knowledge">阅读本文你需要了解(pre-knowledge)</a></li>
+<li><a href="#简述">简述</a></li>
+<li><a href="#生产模式架构">生产模式架构</a>
+<ul>
+<li><a href="#express中间层">express中间层</a></li>
+</ul></li>
+<li><a href="#开发模式">开发模式</a></li>
+<li><a href="#扩展">扩展</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h2 id="阅读本文你需要了解-pre-knowledge">阅读本文你需要了解(pre-knowledge)</h2>
+
+<ol>
+<li>javascript语法</li>
+<li>http协议的基本知识</li>
+</ol>
+
+<h2 id="简述">简述</h2>
+
+<p>我接触<code>前后端分离</code>这个概念, 最早是在使用<code>ASP.NET MVC4</code>的时候. 那时候主要做的就是把一个web项目分层, M-model, V-view, C-controller各司其职, 配合的也是非常好. 但是前后端分离的没那么彻底, 项目还是一整个项目.<br />
+随着<code>vuejs</code>, <code>angular2</code>, <code>reactjs</code>这些框架的逐渐成熟, 生态圈日渐完善, <code>前后端分离</code>这个概念就变的越来越火了. 这些框架的发展, 算是给前端开发带来了革命性的变更(主要得益于HTML的新特性). 下面我就想讲一讲基于这些前端框架的&rdquo;新型&rdquo;<code>前后端分离</code>.<br />
+归根结底, 不管是哪种程度的分离, 最终目标都是为了解决以下一些问题(如不完善, 欢迎补充):</p>
+
+<ul>
+<li>解放开发人员, 使其能专注于各自的业务领域. 前端不用再搭建后端环境, 后端只需要专注api开发.</li>
+<li>前后端项目分开部署, 后端不再需要对前端资源进行打包、压缩操作。</li>
+</ul>
+
+<h2 id="生产模式架构">生产模式架构</h2>
+
+<p>下面我以 react + express(nodejs) + nirvana(go) 为例说明一种实用的<code>前后端分离</code>架构.
+<img src="/images/separate_arch.png" alt="架构图" /></p>
+
+<h3 id="express中间层">express中间层</h3>
+
+<p>根据上图我们可以得知, express项目只需要实现两个功能.</p>
+
+<ol>
+<li>将react项目所在的目录设置为静态路由.</li>
+<li>按需转发api请求.<br /></li>
+</ol>
+
+<p>首先, 我们来看一下整个express项目的目录结构:</p>
+
+<pre><code>.
+├── app           # 前端静态目录
+│   └── build     # react打包后的文件
+├── app.js        # express项目代码
+├── bin           
+│   └── www       # express项目入口文件
+└── package.json
+</code></pre>
+
+<p>我使用了<a href="https://github.com/expressjs/generator">express-generator</a>生成express项目目录, 并删去了一些不相关的内容. 剩下的文件说明如下:</p>
+
+<ul>
+<li><code>bin/www</code>文件是项目的入口, 里面包含了一些环境变量的判断(如:PORT), 并根据<code>app.js</code>的内容创建一个http服务器.</li>
+
+<li><p><code>app.js</code>定义了http服务器的路由, 请求处理器等内容, 代码如下:</p>
+
+<pre><code class="language-js">// ...
+var express = require('express');
+var proxy = require('express-http-proxy');
+
+var app = express();
+
+app.use('/', express.static('app/build'));
+app.use('/api', proxy('localhost:8081'));
+// ...
+module.exports = app;
+</code></pre>
+
+<p>我在app.js中定义了两个路由, 一个就是<code>app.use('/', express.static('app/build'));</code>, 为编译react项目得到的静态目录创建了一个静态路由, 另一个则是把<code>/api</code>路由段的请求转发到了另一个服务端<code>localhost:8081</code>上. 你可以根据你的具体需求在这里定义更多的内容.</p></li>
+</ul>
+
+<h2 id="开发模式">开发模式</h2>
+
+<p>我们知道, react在开发模式下提供了一个用于开发的服务端. 主要功能包括监听文件变化、自动编译、自动刷新浏览器等. 结合上述架构, 我们在开发模式下想要请求服务端api(这里的服务端指express中间层), 需要在react项目的<code>package.json</code>文件中加入一个配置项. <code>&quot;proxy&quot;: &quot;http://localhost:8080&quot;</code>, 假设我们的express中间层项目监听8080端口, react开发服务监听3000端口, 增加了这个配置项之后, react开发服务会将除了静态资源以外的http请求转发到<code>localhost:8080</code>这个地址(也就是我们的express中间层). 这样, 我们就能在兼容上述架构的基础上, 使用react方便的开发服务. 开发模式的架构如下图所示:<br />
+<img src="/images/separate_arch_dev.png" alt="开发模式架构图" /></p>
+
+<h2 id="扩展">扩展</h2>
+
+<p>本文以react + express(nodejs) + nirvana(go)作为示例, 并不说明这些技术是必须的, 你可以根据你的喜好替换任意的技术. 如: 你可以用任何实现了前端路由的框架(eg: vuejs,ng2)代替<code>react</code>, 也可以用任何具备标准http服务能力的技术代替<code>express中间层</code>, <code>api层</code>则可以采用任何你喜欢的后端技术.<br />
+得益于开源社区的贡献, 已经有社区开发者实现了基于nodejs的react的服务端渲染, 使用nodejs + react是一个不错的选择. 关于服务端渲染的内容, 不在本文的论述范围之内.</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">NaRro</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-03-14</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/">前后端分离</a>
+          
+          <a href="/tags/web/">web</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/others/smartinterface/">
+            <span class="next-text nav-default">Smart Interface使用说明</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:501xs05@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/narrowizard" class="iconfont icon-github" title="github"></a>
+  <a href="https://narrowizard.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">NaRro</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-100396165-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

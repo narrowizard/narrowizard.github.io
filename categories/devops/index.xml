@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devops on NaRro</title>
+    <link>https://narrowizard.github.io/categories/devops/</link>
+    <description>Recent content in Devops on NaRro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Sun, 25 Feb 2018 13:07:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://narrowizard.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用goaccess生成可视化的访问日志</title>
+      <link>https://narrowizard.github.io/post/devops/goaccess/</link>
+      <pubDate>Sun, 25 Feb 2018 13:07:21 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/devops/goaccess/</guid>
+      <description>阅读本文你需要了解(pre-knowledge) 基本的terminal命令 http协议的基础知识 简介 GoAccess是一个开源的实时web访</description>
+    </item>
+    
+    <item>
+      <title>在centos安装最新版Docker CE版本</title>
+      <link>https://narrowizard.github.io/post/devops/docker_centos2/</link>
+      <pubDate>Mon, 29 Jan 2018 17:07:38 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/devops/docker_centos2/</guid>
+      <description>阅读本文你需要了解(pre-knowledge) 基本的terminal命令 说明 上一篇docker的文章是以前在centos安装docker的</description>
+    </item>
+    
+    <item>
+      <title>fatal: protocol error: bad line length character</title>
+      <link>https://narrowizard.github.io/post/devops/fatal-protocol-error-bad-line-length-character/</link>
+      <pubDate>Sat, 27 Jan 2018 11:29:58 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/devops/fatal-protocol-error-bad-line-length-character/</guid>
+      <description>git的ssh客户端在收到错误信息后，会主动断开连接，并返回错误信息，但是信息内容不完整。 这个时候通过以下方法获取错误信息。 ssh &amp;lt;user&amp;gt;@&amp;lt;host&amp;gt; git-receive-pack &amp;lt;path-to-git-repository&amp;gt; refer to:stackoverflow q8170436</description>
+    </item>
+    
+    <item>
+      <title>centos 常用配置</title>
+      <link>https://narrowizard.github.io/post/devops/centos_config/</link>
+      <pubDate>Sat, 27 Jan 2018 11:27:27 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/devops/centos_config/</guid>
+      <description>设置时间同步 #安装ntp yum install ntp #跟time.nist.gov同步时间 ntpdate time.nist.gov ntpdate出现错误无法使用时, 有一种神奇的方法来设置时间(如有需</description>
+    </item>
+    
+    <item>
+      <title>Install docker on CentOS7</title>
+      <link>https://narrowizard.github.io/post/devops/docker_centos/</link>
+      <pubDate>Sat, 27 Jan 2018 10:50:35 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/devops/docker_centos/</guid>
+      <description>Install docker on CentOS7 阅读本文你需要了解(pre-knowledge) 基本的terminal命令 Update 经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发</description>
+    </item>
+    
+    <item>
+      <title>gitlab迁移日志</title>
+      <link>https://narrowizard.github.io/post/devops/gitlab_migration/</link>
+      <pubDate>Sat, 27 Jan 2018 10:42:19 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/devops/gitlab_migration/</guid>
+      <description>由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。 旧服务器信息 当时部署gitlab是直接使用官方的docker镜</description>
+    </item>
+    
+    <item>
+      <title>使用hugo搭建静态markdown博客</title>
+      <link>https://narrowizard.github.io/post/devops/build_hugo/</link>
+      <pubDate>Fri, 26 Jan 2018 15:58:38 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/devops/build_hugo/</guid>
+      <description>前言(这一段唠嗑,请自行跳过) 其实想要搞一个博客已经有一段时间了。由于种种原因（其实就是懒），一直没有真的动手。说起原因，我觉得比较重要的就</description>
+    </item>
+    
+  </channel>
+</rss>

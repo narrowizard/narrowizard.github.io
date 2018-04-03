@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>摄影 on NaRro</title>
+    <link>https://narrowizard.github.io/categories/%E6%91%84%E5%BD%B1/</link>
+    <description>Recent content in 摄影 on NaRro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Sat, 27 Jan 2018 11:22:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://narrowizard.github.io/categories/%E6%91%84%E5%BD%B1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>照片的EXIF属性信息</title>
+      <link>https://narrowizard.github.io/post/others/exif/</link>
+      <pubDate>Sat, 27 Jan 2018 11:22:30 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/others/exif/</guid>
+      <description>Orientation(方向) MeteringMode(测光模式) 0 未知 1 平均 2 偏中心平均 3 点 4 多点 5 图案(多重) 6 部分 255 其他 Flash(闪</description>
+    </item>
+    
+  </channel>
+</rss>

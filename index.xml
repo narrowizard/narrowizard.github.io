@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>伟大的渺小 on NaRro</title>
+    <title>NaRro</title>
     <link>https://narrowizard.github.io/</link>
-    <description>Recent content in 伟大的渺小 on NaRro</description>
+    <description>Recent content on NaRro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Wed, 14 Mar 2018 08:59:30 +0800</lastBuildDate>
@@ -13,127 +13,92 @@
     
     <item>
       <title>web前后端分离式开发实践</title>
-      <link>https://narrowizard.github.io/backends/separate_end/</link>
+      <link>https://narrowizard.github.io/post/backends/separate_end/</link>
       <pubDate>Wed, 14 Mar 2018 08:59:30 +0800</pubDate>
       
-      <guid>https://narrowizard.github.io/backends/separate_end/</guid>
-      <description>阅读本文你需要了解(pre-knowledge)  javascript语法 http协议的基本知识  简述 我接触前后端分离这个概念, 最早是在使用ASP.NET MVC4的时候. 那时候主要做的就是把一个web项目分层, M-model, V-view, C-controller各司其职, 配合的也是非常好. 但是前后端分离的没那么彻底, 项目还是一整个项目.
-随着vuejs, angular2, reactjs这些框架的逐渐成熟, 生态圈日渐完善, 前后端分离这个概念就变的越来越火了. 这些框架的发展, 算是给前端开发带来了革命性的变更(主要得益于HTML的新特性). 下面我就想讲一讲基于这些前端框架的&amp;rdquo;新型&amp;rdquo;前后端分离.
-归根结底, 不管是哪种程度的分离, 最终目标都是为了解决以下一些问题(如不完善, 欢迎补充):
- 解放开发人员, 使其能专注于各自的业务领域. 前端不用再搭建后端环境, 后端只需要专注api开发. 前后端项目分开部署, 后端不再需要对前端资源进行打包、压缩操作。  生产模式架构 下面我以 react + express(nodejs) + nirvana(go) 为例说明一种实用的前后端分离架构. express中间层 根据上图我们可以得知, express项目只需要实现两个功能.
- 将react项目所在的目录设置为静态路由. 按需转发api请求.
-  首先, 我们来看一下整个express项目的目录结构:
-. ├── app # 前端静态目录 │ └── build # react打包后的文件 ├── app.js # express项目代码 ├── bin │ └── www # express项目入口文件 └── package.</description>
+      <guid>https://narrowizard.github.io/post/backends/separate_end/</guid>
+      <description>阅读本文你需要了解(pre-knowledge) javascript语法 http协议的基本知识 简述 我接触前后端分离这个概念, 最早是在使用AS</description>
     </item>
     
     <item>
       <title>Smart Interface使用说明</title>
-      <link>https://narrowizard.github.io/others/smartinterface/</link>
+      <link>https://narrowizard.github.io/post/others/smartinterface/</link>
       <pubDate>Mon, 26 Feb 2018 15:05:29 +0800</pubDate>
       
-      <guid>https://narrowizard.github.io/others/smartinterface/</guid>
-      <description> 简介 smart interface是一个基于tinygo和tinyts的接口文档管理系统。
-特性  项目私有化 项目订阅 接口日志 接口标签 数据统计 多语言支持(json,typescript,java,golang) 接口搜索(参数、标签搜索) api支持  开始使用  打开smart interface,地址: https://smartinterface.narro.me/login 注册帐号(注意需要验证邮箱)或者使用第三方帐号登录。 登录系统后新建一个项目,选择是否公开,填写项目名称以及项目描述。  创建项目后,参照下图进入项目编辑页面  项目编辑页面如下图所示  示例项目预览页   </description>
+      <guid>https://narrowizard.github.io/post/others/smartinterface/</guid>
+      <description>简介 smart interface是一个基于tinygo和tinyts的接口文档管理系统。 特性 项目私有化 项目订阅 接口日志 接口标签 数据统计 多语言支持(j</description>
     </item>
     
     <item>
       <title>使用goaccess生成可视化的访问日志</title>
-      <link>https://narrowizard.github.io/devops/goaccess/</link>
+      <link>https://narrowizard.github.io/post/devops/goaccess/</link>
       <pubDate>Sun, 25 Feb 2018 13:07:21 +0800</pubDate>
       
-      <guid>https://narrowizard.github.io/devops/goaccess/</guid>
-      <description>阅读本文你需要了解(pre-knowledge)  基本的terminal命令 http协议的基础知识  简介 GoAccess是一个开源的实时web访问日志分析工具，实现了基于终端或浏览器的数据可视化，并且提供了有用的统计数据。
-安装 centos $ wget http://tar.goaccess.io/goaccess-1.2.tar.gz $ tar xvzf goaccess-1.2.tar.gz $ cd goaccess-1.2/ # 安装依赖 $ yum install ncurses-devel gcc $ yum install geoip-devel tokyocabinet-devel $ ./configure --enable-utf8 --enable-geoip=legacy # 编译 $ make &amp;amp;&amp;amp; make install $ ln -s /usr/local/bin/goaccess /usr/bin/goaccess  使用 goaccess预设了对以下日志格式的支持:
- NCSA Combined Log Format NCSA Combined Log Format with Virtual Host Common Log Format (CLF) Common Log Format (CLF) with Virtual Host W3C Squid Native Format</description>
+      <guid>https://narrowizard.github.io/post/devops/goaccess/</guid>
+      <description>阅读本文你需要了解(pre-knowledge) 基本的terminal命令 http协议的基础知识 简介 GoAccess是一个开源的实时web访</description>
     </item>
     
     <item>
       <title>在centos安装最新版Docker CE版本</title>
-      <link>https://narrowizard.github.io/devops/docker_centos2/</link>
+      <link>https://narrowizard.github.io/post/devops/docker_centos2/</link>
       <pubDate>Mon, 29 Jan 2018 17:07:38 +0800</pubDate>
       
-      <guid>https://narrowizard.github.io/devops/docker_centos2/</guid>
-      <description> 阅读本文你需要了解(pre-knowledge)  基本的terminal命令  说明 上一篇docker的文章是以前在centos安装docker的方法， 现在使用这种方法只能安装docker ce 17.05版本。最新的安装方法参见官方文档，目前版本为17.12.0
-Step $ sudo yum install -y yum-utils \ device-mapper-persistent-data \ lvm2 $ sudo yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo $ sudo yum install docker-ce $ sudo systemctl start docker  </description>
+      <guid>https://narrowizard.github.io/post/devops/docker_centos2/</guid>
+      <description>阅读本文你需要了解(pre-knowledge) 基本的terminal命令 说明 上一篇docker的文章是以前在centos安装docker的</description>
     </item>
     
     <item>
       <title>fatal: protocol error: bad line length character</title>
-      <link>https://narrowizard.github.io/devops/fatal-protocol-error-bad-line-length-character/</link>
+      <link>https://narrowizard.github.io/post/devops/fatal-protocol-error-bad-line-length-character/</link>
       <pubDate>Sat, 27 Jan 2018 11:29:58 +0800</pubDate>
       
-      <guid>https://narrowizard.github.io/devops/fatal-protocol-error-bad-line-length-character/</guid>
-      <description>git的ssh客户端在收到错误信息后，会主动断开连接，并返回错误信息，但是信息内容不完整。
-这个时候通过以下方法获取错误信息。
-ssh &amp;lt;user&amp;gt;@&amp;lt;host&amp;gt; git-receive-pack &amp;lt;path-to-git-repository&amp;gt;  refer to:stackoverflow q8170436</description>
+      <guid>https://narrowizard.github.io/post/devops/fatal-protocol-error-bad-line-length-character/</guid>
+      <description>git的ssh客户端在收到错误信息后，会主动断开连接，并返回错误信息，但是信息内容不完整。 这个时候通过以下方法获取错误信息。 ssh &amp;lt;user&amp;gt;@&amp;lt;host&amp;gt; git-receive-pack &amp;lt;path-to-git-repository&amp;gt; refer to:stackoverflow q8170436</description>
     </item>
     
     <item>
       <title>centos 常用配置</title>
-      <link>https://narrowizard.github.io/devops/centos_config/</link>
+      <link>https://narrowizard.github.io/post/devops/centos_config/</link>
       <pubDate>Sat, 27 Jan 2018 11:27:27 +0800</pubDate>
       
-      <guid>https://narrowizard.github.io/devops/centos_config/</guid>
-      <description> 设置时间同步 #安装ntp yum install ntp #跟time.nist.gov同步时间 ntpdate time.nist.gov  ntpdate出现错误无法使用时, 有一种神奇的方法来设置时间(如有需要请自行为wget加上代理,http_proxy=xxx wget),参考资料
-sudo date -s &amp;quot;$(wget -qSO- --max-redirect=0 google.com 2&amp;gt;&amp;amp;1 | grep Date: | cut -d&#39; &#39; -f5-8)Z&amp;quot;  设置静态ip  配置文件地址: /etc/sysconfig/network-scripts/ifcfg-eth0 参考配置  TYPE=Ethernet BOOTPROTO=static DEFROUTE=yes PEERDNS=yes PEERROUTES=yes IPV4_FAILURE_FATAL=no IPV6INIT=yes IPV6_AUTOCONF=yes IPV6_DEFROUTE=yes IPV6_PEERDNS=yes IPV6_PEERROUTES=yes IPV6_FAILURE_FATAL=no NAME=eth0 UUID=aebdeada-4d90-4b7d-b7e9-e964bdd74caa DEVICE=eth0 ONBOOT=yes IPADDR=192.168.2.220 NETMASK=255.255.255.0 GATEWAY=192.168.2.1 DNS1=192.168.2.1   重启网络 systemctl restart network  </description>
+      <guid>https://narrowizard.github.io/post/devops/centos_config/</guid>
+      <description>设置时间同步 #安装ntp yum install ntp #跟time.nist.gov同步时间 ntpdate time.nist.gov ntpdate出现错误无法使用时, 有一种神奇的方法来设置时间(如有需</description>
     </item>
     
     <item>
       <title>照片的EXIF属性信息</title>
-      <link>https://narrowizard.github.io/others/exif/</link>
+      <link>https://narrowizard.github.io/post/others/exif/</link>
       <pubDate>Sat, 27 Jan 2018 11:22:30 +0800</pubDate>
       
-      <guid>https://narrowizard.github.io/others/exif/</guid>
-      <description> Orientation(方向) MeteringMode(测光模式)  0 未知 1 平均 2 偏中心平均 3 点 4 多点 5 图案(多重) 6 部分 255 其他  Flash(闪光灯模式) ExposureProgram(曝光程序)  0 未知 1 手动 2 正常 3 光圈优先 4 快门优先 5 创作程序(偏重使用视野深度) 6 操作程序(偏重使用快门速度) 7 纵向模式 8 横向模式  WhiteBalance(白平衡)  0 自动 1 手动  LightSource(光源)  0 未知 1 日光 2 荧光 3 钨丝灯 4 闪光灯 9 晴天 10 多云 11 阴天 12 日光灯 13  </description>
+      <guid>https://narrowizard.github.io/post/others/exif/</guid>
+      <description>Orientation(方向) MeteringMode(测光模式) 0 未知 1 平均 2 偏中心平均 3 点 4 多点 5 图案(多重) 6 部分 255 其他 Flash(闪</description>
     </item>
     
     <item>
       <title>Install docker on CentOS7</title>
-      <link>https://narrowizard.github.io/devops/docker_centos/</link>
+      <link>https://narrowizard.github.io/post/devops/docker_centos/</link>
       <pubDate>Sat, 27 Jan 2018 10:50:35 +0800</pubDate>
       
-      <guid>https://narrowizard.github.io/devops/docker_centos/</guid>
-      <description> Install docker on CentOS7 阅读本文你需要了解(pre-knowledge)  基本的terminal命令  Update  经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发现他的安装说明也更新了，参照新版安装说明。 小版本更新只需要执行 yum install docker-engine 就可以了。如：从17.03更新到17.05。经测试，从17.03升级到17.05后只需要重启container就可以了，并不会对原有的镜像及容器造成影响。  Required  os: x64 kernel: 3.10+
-$ uname -r
-  Step $ yum makecache $ yum update $ tee /etc/yum.repos.d/docker.repo &amp;lt;&amp;lt;-&#39;EOF&#39; [dockerrepo] name=Docker Repository baseurl=https://yum.dockerproject.org/repo/main/centos/7/ enabled=1 gpgcheck=1 gpgkey=https://yum.dockerproject.org/gpg EOF $ yum install docker-engine $ systemctl enable docker.service $ systemctl start docker  换docker源 使用配置文件/etc/docker/daemon.json，需要docker版本1.10以上
-{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;&amp;lt;your accelerate address&amp;gt;&amp;quot;] }  常用命令 # 使用root打开docker bash docker exec -u 0 -it container_name bash # 从container复制文件到host docker cp &amp;lt;containerId&amp;gt;:/file/path/within/container /host/path/target # 从host复制文件到container docker cp /host/path/target &amp;lt;containerId&amp;gt;:/file/path/within/container # remove Exited container docker ps -a | grep Exited | awk &#39;{print $1}&#39; | xargs docker rm # remove images that without name or tag docker images | grep none | awk &#39;{print $3}&#39; | xargs docker rmi  </description>
+      <guid>https://narrowizard.github.io/post/devops/docker_centos/</guid>
+      <description>Install docker on CentOS7 阅读本文你需要了解(pre-knowledge) 基本的terminal命令 Update 经过验证,用这种方法只能安装 docker 17.05.0-ce 版本,查看官方文档后,发</description>
     </item>
     
     <item>
       <title>gitlab迁移日志</title>
-      <link>https://narrowizard.github.io/devops/gitlab_migration/</link>
+      <link>https://narrowizard.github.io/post/devops/gitlab_migration/</link>
       <pubDate>Sat, 27 Jan 2018 10:42:19 +0800</pubDate>
       
-      <guid>https://narrowizard.github.io/devops/gitlab_migration/</guid>
-      <description> 由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。
-旧服务器信息 当时部署gitlab是直接使用官方的docker镜像的，版本为8.14.0-ce.0
-使用外置的postgresql，也是用docker跑的一个container，版本为9.6.1
- postgres的data目录在/srv/data/db gitlab的data目录在/srv/data/gitlab/data gitlab的config目录在/srv/data/gitlab/config gitlab的log目录在/srv/data/gitlab/log  迁移步骤 原本可以直接使用gitlab的迁移工具备份并且迁移的，但是由于使用了外置的postgresql，导致数据库版本不匹配，所以只能手动迁移了。
- 首先迁移数据库，直接将旧的数据库目录复制到新的服务器上，重新用docker跑一个新的postgresql container，并把数据目录挂载起来就ok了。 使用gitlab提供的迁移工具进行迁移，但是跳过数据库。  # 备份 gitlab-rake gitlab:backup:create SKIP=db # 恢复 # 停止相关数据连接服务 gitlab-ctl stop unicorn gitlab-ctl stop sidekiq # 从1393513186编号备份中恢复 gitlab-rake gitlab:backup:restore BACKUP=1393513186 # 启动Gitlab sudo gitlab-ctl start  </description>
+      <guid>https://narrowizard.github.io/post/devops/gitlab_migration/</guid>
+      <description>由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。 旧服务器信息 当时部署gitlab是直接使用官方的docker镜</description>
     </item>
     
     <item>
       <title>使用hugo搭建静态markdown博客</title>
-      <link>https://narrowizard.github.io/devops/build_hugo/</link>
+      <link>https://narrowizard.github.io/post/devops/build_hugo/</link>
       <pubDate>Fri, 26 Jan 2018 15:58:38 +0800</pubDate>
       
-      <guid>https://narrowizard.github.io/devops/build_hugo/</guid>
-      <description>前言(这一段唠嗑,请自行跳过) 其实想要搞一个博客已经有一段时间了。由于种种原因（其实就是懒），一直没有真的动手。说起原因，我觉得比较重要的就是：现在市面上的博客已经有很多了，我也想不到什么特色功能，也就没有什么动力自己动手写一个博客。
-之前有尝试过一些开源的项目，但是均以失败告终了（不是项目不好，是有其他原因的）。下面说说尝试过的一些开源项目:
- wordpress。wordpress是一个基于php的CMS，使用mysql作为数据库，功能十分完备，各种模板，支持后台管理，自定义模块什么的。不过我失败的原因，竟然是，我那1核1G的服务器根本跑不了wordpress啊，无奈只能放弃。 blog。这个博客系统呢，是小伙伴开发的，目的是为了测试tinygo框架。项目支持分类、文件管理、评论等博客常用的功能，这个博客系统我也用过一段时间，发现他的markdown编辑器有点难用，在加上UI不出众，所以决定找个新的。值得一提的是，得益于golang的性能，tinygo框架以及这个博客系统对系统资源的要求非常低，很好的解决了我在用wordpress时的尴尬。 jekyll。这个项目是在搞github page的时候发现的，那时候学到了一个新的概念，静态博客生成器。结合自己的需求，突然很喜欢这样的静态博客，总的来说就是简洁、够用。而且jekyll还有一个天生优势，那就是得到了github page的支持，这个优势非常明显，我们可以省下一大笔购买服务器的钱。但是我在用这个的时候呢，又碰壁了，得益于国内的网络环境，我尝试了好几次都不能安装成功（也许是我需要一个linux系统，我记得之前安装失败是报了个msys2的错）。能够成功安装jekyll的同学，我还是很看好这个项目的。
-  然后就来到了hugo，这个项目简直完美满足我的所有需求啊，而且有很多很漂亮的主题。不过在使用过程中，还是踩了很多坑，下面就说说这整个过程。
-安装 得益于golang的特性，编译后，我们就可以得到一个hugo的可执行文件。如果只是想用hugo来写博客，而不是研究他的源码什么的，我建议直接到这里选择适合你操作系统的版本下载，因为只有一个可执行文件，太方便了。不推荐大家使用源码安装还是因为hugo有用到一些托管在golang.org上的package，很难下下来。
-拿到hugo的可执行文件之后呢，就跟着官方的quickstart一路下来，基本没有什么大的问题（一开始尝试了一下换主题，不过由于没有很理解hugo的渲染逻辑，果断失败了，下次搞好了再写一篇关于主题的文章）。
-如何使用hugo 一开始用 hugo new site your_site_path 创建一个hugo项目之后，我就懵了，可能是我没有乖乖按照quickstart的流程走，所以产生了这么多问题。
- 我是谁？ 我在哪？ 我要干什么？ 我怎么设置分类？ 我怎么写文章？ 我怎么在首页显示列表？  经过一段时间的摸索之后，我发现hugo帮我们做了很多事情。下面就简要说说我用到的一些基础功能吧（以下内容以默认的ananke主题为主，没有试过别的主题，不知道是否一样）。
-创建新文章 创建新文章用到了hugo的一个命令，hugo new path/file.md，这个命令会在content目录下根据你的参数来创建文章，并会在文件中加入一些配置信息(类似于模板一样的东西，模板文件为archetypes目录下的default.md)。
-首页 首页是位于content目录下的_index.md文件。
-分类 在content目录下创建子目录，hugo会将这些子目录识别为分类。每一个子目录下面都可以放一个_index.md文件，作为该分类的主页内容，这些内容会被渲染在分类列表页。
-文章 在content目录或其子目录下创建md文件，hugo会将这些文件识别为文章，并根据目录归到相应的分类中去。
-图片 放一张测试图片 我们在编写博文的时候，自然是需要用到图片的。我们可以在content目录或者static目录下面放置文件，然后用相对路径 ![](url/to/image.png) 的方式来引用图片就可以了，hugo会自动识别图片所在的位置并把图片放到相应的位置。
-部署方案 刚开始上手hugo的时候，我想了两种部署方案。介于我在服务器上用了docker，所以想说一下第一种方案。
-构建hugo的docker镜像，将hugo项目挂载到container里（deprecated） 这种方案并不好用，简单说一下，就是利用docker构建hugo的镜像（拉取hugo的源码，编译）跑一个容器，将hugo项目（就是我们的博客）clone到服务器的目录，通过volumes将该目录挂载到前面的容器。这个方案是打算用hugo当静态文件服务器使用的，但是后来看到了官方文档关于hugo_server的描述，加上尝试这种方案时遇到的一些问题（js，css引用链接不对），果断放弃了。官方原文如下：
- While hugo server is high performance, it is a webserver with limited options. Many run it in production, but the standard behavior is for people to use it in development and use a more full featured server such as Nginx or Caddy.</description>
+      <guid>https://narrowizard.github.io/post/devops/build_hugo/</guid>
+      <description>前言(这一段唠嗑,请自行跳过) 其实想要搞一个博客已经有一段时间了。由于种种原因（其实就是懒），一直没有真的动手。说起原因，我觉得比较重要的就</description>
     </item>
     
   </channel>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>使用hugo搭建静态markdown博客 - NaRro</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="NaRro" />
+  <meta name="description" content="前言(这一段唠嗑,请自行跳过) 其实想要搞一个博客已经有一段时间了。由于种种原因（其实就是懒），一直没有真的动手。说起原因，我觉得比较重要的就" />
+
+  <meta name="keywords" content="narro, blog, web, frontend, docker, devOps, backend, typescript, javascript, golang" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.38" />
+
+
+<link rel="canonical" href="https://narrowizard.github.io/post/devops/build_hugo/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="使用hugo搭建静态markdown博客" />
+<meta property="og:description" content="前言(这一段唠嗑,请自行跳过) 其实想要搞一个博客已经有一段时间了。由于种种原因（其实就是懒），一直没有真的动手。说起原因，我觉得比较重要的就" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://narrowizard.github.io/post/devops/build_hugo/" />
+
+
+
+<meta property="article:published_time" content="2018-01-26T15:58:38&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-01-26T15:58:38&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="使用hugo搭建静态markdown博客">
+<meta itemprop="description" content="前言(这一段唠嗑,请自行跳过) 其实想要搞一个博客已经有一段时间了。由于种种原因（其实就是懒），一直没有真的动手。说起原因，我觉得比较重要的就">
+
+
+<meta itemprop="datePublished" content="2018-01-26T15:58:38&#43;08:00" />
+<meta itemprop="dateModified" content="2018-01-26T15:58:38&#43;08:00" />
+<meta itemprop="wordCount" content="2285">
+
+
+
+<meta itemprop="keywords" content="hugo,blog,markdown," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用hugo搭建静态markdown博客"/>
+<meta name="twitter:description" content="前言(这一段唠嗑,请自行跳过) 其实想要搞一个博客已经有一段时间了。由于种种原因（其实就是懒），一直没有真的动手。说起原因，我觉得比较重要的就"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">NaRro</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">NaRro</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">使用hugo搭建静态markdown博客</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-01-26 </span>
+        <div class="post-category">
+            
+              <a href="/categories/devops/"> DevOps </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#前言-这一段唠嗑-请自行跳过">前言(这一段唠嗑,请自行跳过)</a></li>
+<li><a href="#安装">安装</a></li>
+<li><a href="#如何使用hugo">如何使用hugo</a>
+<ul>
+<li><a href="#创建新文章">创建新文章</a></li>
+<li><a href="#首页">首页</a></li>
+<li><a href="#分类">分类</a></li>
+<li><a href="#文章">文章</a></li>
+<li><a href="#图片">图片</a></li>
+</ul></li>
+<li><a href="#部署方案">部署方案</a>
+<ul>
+<li><a href="#构建hugo的docker镜像-将hugo项目挂载到container里-deprecated">构建hugo的docker镜像，将hugo项目挂载到container里（deprecated）</a></li>
+<li><a href="#本地编译hugo项目-部署hugo生成的静态文件到服务器">本地编译hugo项目，部署hugo生成的静态文件到服务器</a></li>
+</ul></li>
+<li><a href="#后续">后续</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h2 id="前言-这一段唠嗑-请自行跳过">前言(这一段唠嗑,请自行跳过)</h2>
+
+<p>其实想要搞一个博客已经有一段时间了。由于种种原因（其实就是懒），一直没有真的动手。说起原因，我觉得比较重要的就是：现在市面上的博客已经有很多了，我也想不到什么特色功能，也就没有什么动力自己动手写一个博客。<br />
+之前有尝试过一些开源的项目，但是均以失败告终了（不是项目不好，是有其他原因的）。下面说说尝试过的一些开源项目:</p>
+
+<ul>
+<li><a href="https://baike.baidu.com/item/WordPress/450615?fr=aladdin">wordpress</a>。wordpress是一个基于php的CMS，使用mysql作为数据库，功能十分完备，各种模板，支持后台管理，自定义模块什么的。不过我失败的原因，竟然是，我那1核1G的服务器根本跑不了wordpress啊，无奈只能放弃。</li>
+<li><a href="https://github.com/kdada/blog">blog</a>。这个博客系统呢，是小伙伴开发的，目的是为了测试tinygo框架。项目支持分类、文件管理、评论等博客常用的功能，这个博客系统我也用过一段时间，发现他的markdown编辑器有点难用，在加上UI不出众，所以决定找个新的。值得一提的是，得益于golang的性能，tinygo框架以及这个博客系统对系统资源的要求非常低，很好的解决了我在用wordpress时的尴尬。</li>
+<li><a href="https://jekyllrb.com/">jekyll</a>。这个项目是在搞github page的时候发现的，那时候学到了一个新的概念，静态博客生成器。结合自己的需求，突然很喜欢这样的静态博客，总的来说就是简洁、够用。而且jekyll还有一个天生优势，那就是得到了github page的支持，这个优势非常明显，我们可以省下一大笔购买服务器的钱。但是我在用这个的时候呢，又碰壁了，得益于国内的网络环境，我尝试了好几次都不能安装成功（也许是我需要一个linux系统，我记得之前安装失败是报了个msys2的错）。能够成功安装jekyll的同学，我还是很看好这个项目的。<br /></li>
+</ul>
+
+<p>然后就来到了<a href="http://gohugo.io/">hugo</a>，这个项目简直完美满足我的所有需求啊，而且有很多很漂亮的主题。不过在使用过程中，还是踩了很多坑，下面就说说这整个过程。</p>
+
+<h2 id="安装">安装</h2>
+
+<p>得益于golang的特性，编译后，我们就可以得到一个hugo的可执行文件。如果只是想用hugo来写博客，而不是研究他的源码什么的，<strong>我建议直接到<a href="https://github.com/gohugoio/hugo/releases">这里</a>选择适合你操作系统的版本下载</strong>，因为只有一个可执行文件，太方便了。不推荐大家使用源码安装还是因为hugo有用到一些托管在golang.org上的package，很难下下来。<br />
+拿到hugo的可执行文件之后呢，就跟着官方的<a href="http://gohugo.io/getting-started/quick-start/">quickstart</a>一路下来，基本没有什么大的问题（一开始尝试了一下换主题，不过由于没有很理解hugo的渲染逻辑，果断失败了，下次搞好了再写一篇关于主题的文章）。</p>
+
+<h2 id="如何使用hugo">如何使用hugo</h2>
+
+<p>一开始用 <code>hugo new site your_site_path</code> 创建一个hugo项目之后，我就懵了，可能是我没有乖乖按照quickstart的流程走，所以产生了这么多问题。</p>
+
+<ul>
+<li>我是谁？</li>
+<li>我在哪？</li>
+<li>我要干什么？</li>
+<li>我怎么设置分类？</li>
+<li>我怎么写文章？</li>
+<li>我怎么在首页显示列表？</li>
+</ul>
+
+<p>经过一段时间的摸索之后，我发现hugo帮我们做了很多事情。下面就简要说说我用到的一些基础功能吧（以下内容以默认的ananke主题为主，没有试过别的主题，不知道是否一样）。</p>
+
+<h3 id="创建新文章">创建新文章</h3>
+
+<p>创建新文章用到了hugo的一个命令，<code>hugo new path/file.md</code>，这个命令会在content目录下根据你的参数来创建文章，并会在文件中加入一些配置信息(类似于模板一样的东西，模板文件为archetypes目录下的default.md)。</p>
+
+<h3 id="首页">首页</h3>
+
+<p>首页是位于content目录下的_index.md文件。</p>
+
+<h3 id="分类">分类</h3>
+
+<p>在content目录下创建子目录，hugo会将这些子目录识别为分类。每一个子目录下面都可以放一个_index.md文件，作为该分类的主页内容，这些内容会被渲染在分类列表页。</p>
+
+<h3 id="文章">文章</h3>
+
+<p>在content目录或其子目录下创建md文件，hugo会将这些文件识别为文章，并根据目录归到相应的分类中去。</p>
+
+<h3 id="图片">图片</h3>
+
+<p>放一张测试图片
+<img src="/images/test.jpg" alt="测试图片" />
+我们在编写博文的时候，自然是需要用到图片的。我们可以在content目录或者static目录下面放置文件，然后用相对路径 <code>![](url/to/image.png)</code> 的方式来引用图片就可以了，hugo会自动识别图片所在的位置并把图片放到相应的位置。</p>
+
+<h2 id="部署方案">部署方案</h2>
+
+<p>刚开始上手hugo的时候，我想了两种部署方案。介于我在服务器上用了docker，所以想说一下第一种方案。</p>
+
+<h3 id="构建hugo的docker镜像-将hugo项目挂载到container里-deprecated">构建hugo的docker镜像，将hugo项目挂载到container里（deprecated）</h3>
+
+<p>这种方案并不好用，简单说一下，就是利用docker构建hugo的镜像（拉取hugo的源码，编译）跑一个容器，将hugo项目（就是我们的博客）clone到服务器的目录，通过volumes将该目录挂载到前面的容器。这个方案是打算用hugo当静态文件服务器使用的，但是后来看到了官方文档关于<a href="https://gohugo.io/commands/hugo_server/">hugo_server</a>的描述，加上尝试这种方案时遇到的一些问题（js，css引用链接不对），果断放弃了。官方原文如下：</p>
+
+<blockquote>
+<p>While hugo server is high performance, it is a webserver with limited options. Many run it in production, but the standard behavior is for people to use it in development and use a more full featured server such as Nginx or Caddy.</p>
+</blockquote>
+
+<p>根据官方建议，我们采取下面那种方案。</p>
+
+<h3 id="本地编译hugo项目-部署hugo生成的静态文件到服务器">本地编译hugo项目，部署hugo生成的静态文件到服务器</h3>
+
+<p>官方文档提到，hugo server设计的目的是为了方便用户在编写文章时的调试。于是乎，我们就按着官方的思路来，在本地创建一个hugo项目，然后跑起hugo server写文章，写好之后利用<code>hugo</code>命令生成静态文件（默认好像是public目录）。<strong>将public目录的文件发布到服务端，跑一个静态的http server就可以拉</strong>，官方推荐nginx或者caddy，我也感觉这两个很ok拉。</p>
+
+<h2 id="后续">后续</h2>
+
+<ul>
+<li>本文会继续更新一些hugo相关的内容。</li>
+<li>关于如何使用caddy或nginx来部署静态web服务，则不在本文的论述范围内了。请有兴趣的小伙伴自行查阅相关资料。</li>
+</ul>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">NaRro</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-01-26</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/hugo/">hugo</a>
+          
+          <a href="/tags/blog/">blog</a>
+          
+          <a href="/tags/markdown/">markdown</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/devops/gitlab_migration/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">gitlab迁移日志</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:501xs05@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/narrowizard" class="iconfont icon-github" title="github"></a>
+  <a href="https://narrowizard.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">NaRro</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-100396165-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

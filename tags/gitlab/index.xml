@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitlab on NaRro</title>
+    <link>https://narrowizard.github.io/tags/gitlab/</link>
+    <description>Recent content in Gitlab on NaRro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Sat, 27 Jan 2018 10:42:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://narrowizard.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gitlab迁移日志</title>
+      <link>https://narrowizard.github.io/post/devops/gitlab_migration/</link>
+      <pubDate>Sat, 27 Jan 2018 10:42:19 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/devops/gitlab_migration/</guid>
+      <description>由于公司服务器的更新，原本部署在老服务器上的gitlab需要迁移到新的服务器。 旧服务器信息 当时部署gitlab是直接使用官方的docker镜</description>
+    </item>
+    
+  </channel>
+</rss>

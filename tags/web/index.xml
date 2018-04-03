@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on NaRro</title>
+    <link>https://narrowizard.github.io/tags/web/</link>
+    <description>Recent content in Web on NaRro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Wed, 14 Mar 2018 08:59:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://narrowizard.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>web前后端分离式开发实践</title>
+      <link>https://narrowizard.github.io/post/backends/separate_end/</link>
+      <pubDate>Wed, 14 Mar 2018 08:59:30 +0800</pubDate>
+      
+      <guid>https://narrowizard.github.io/post/backends/separate_end/</guid>
+      <description>阅读本文你需要了解(pre-knowledge) javascript语法 http协议的基本知识 简述 我接触前后端分离这个概念, 最早是在使用AS</description>
+    </item>
+    
+  </channel>
+</rss>

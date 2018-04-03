@@ -1,115 +1,264 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/xsl" href="https://narrowizard.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://narrowizard.github.io/backends/separate_end/</loc>
+    <loc>https://narrowizard.github.io/post/backends/separate_end/</loc>
     <lastmod>2018-03-14T08:59:30+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/others/smartinterface/</loc>
+    <loc>https://narrowizard.github.io/post/others/smartinterface/</loc>
     <lastmod>2018-02-26T15:05:29+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/devops/goaccess/</loc>
+    <loc>https://narrowizard.github.io/post/devops/goaccess/</loc>
     <lastmod>2018-02-25T13:07:21+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/devops/</loc>
+    <loc>https://narrowizard.github.io/post/devops/</loc>
     <lastmod>2018-01-31T10:35:02+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/devops/docker_centos2/</loc>
+    <loc>https://narrowizard.github.io/post/devops/docker_centos2/</loc>
     <lastmod>2018-01-29T17:07:38+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/devops/fatal-protocol-error-bad-line-length-character/</loc>
+    <loc>https://narrowizard.github.io/post/devops/fatal-protocol-error-bad-line-length-character/</loc>
     <lastmod>2018-01-27T11:29:58+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/devops/centos_config/</loc>
+    <loc>https://narrowizard.github.io/post/devops/centos_config/</loc>
     <lastmod>2018-01-27T11:27:27+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/others/exif/</loc>
+    <loc>https://narrowizard.github.io/post/others/exif/</loc>
     <lastmod>2018-01-27T11:22:30+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/devops/docker_centos/</loc>
+    <loc>https://narrowizard.github.io/post/devops/docker_centos/</loc>
     <lastmod>2018-01-27T10:50:35+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/devops/gitlab_migration/</loc>
+    <loc>https://narrowizard.github.io/post/devops/gitlab_migration/</loc>
     <lastmod>2018-01-27T10:42:19+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/devops/build_hugo/</loc>
+    <loc>https://narrowizard.github.io/post/devops/build_hugo/</loc>
     <lastmod>2018-01-26T15:58:38+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/backends/</loc>
+    <loc>https://narrowizard.github.io/tags/access-log/</loc>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/api/</loc>
+    <lastmod>2018-02-26T15:05:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/categories/backends/</loc>
     <lastmod>2018-03-14T08:59:30+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/blog/</loc>
+    <lastmod>2018-01-26T15:58:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://narrowizard.github.io/categories/</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2018-03-14T08:59:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/others/</loc>
+    <loc>https://narrowizard.github.io/tags/centos/</loc>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/centos7/</loc>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/data-visual/</loc>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/categories/devops/</loc>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/docker/</loc>
+    <lastmod>2018-01-29T17:07:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/docs/</loc>
     <lastmod>2018-02-26T15:05:29+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://narrowizard.github.io/tags/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://narrowizard.github.io/tags/exif/</loc>
+    <lastmod>2018-01-27T11:22:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/categories/frontends/</loc>
+    <lastmod>2018-03-14T08:59:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/git/</loc>
+    <lastmod>2018-01-27T11:29:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/gitlab/</loc>
+    <lastmod>2018-01-27T10:42:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/go-access/</loc>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/hugo/</loc>
+    <lastmod>2018-01-26T15:58:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/log/</loc>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/markdown/</loc>
+    <lastmod>2018-01-26T15:58:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://narrowizard.github.io/</loc>
     <lastmod>2018-03-14T08:59:30+08:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/ssh/</loc>
+    <lastmod>2018-01-27T11:29:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/</loc>
+    <lastmod>2018-02-25T13:07:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/web/</loc>
+    <lastmod>2018-03-14T08:59:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/post/</loc>
+    <lastmod>2018-03-14T08:59:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</loc>
+    <lastmod>2018-03-14T08:59:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://narrowizard.github.io/categories/%E6%91%84%E5%BD%B1/</loc>
+    <lastmod>2018-01-27T11:22:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
   </url>
   
 </urlset>
